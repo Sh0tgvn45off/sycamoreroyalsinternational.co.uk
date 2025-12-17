@@ -1,0 +1,4787 @@
+/* -------------------------------------------------
+   PAGES.CSS – Styling for all pages except index.html
+   Uses the gradient color scheme from index.html
+   ------------------------------------------------- */
+
+/* FIX HEADER - NOT STICKY ON NON-INDEX PAGES */
+body:not(.home) .site-header {
+  position: relative;
+  top: 0;
+}
+
+/* Prevent background scroll when modal is open */
+body.modal-open { overflow: hidden; }
+
+/* PAGE HERO SECTION */
+.page-hero {
+  width: 100%;
+  height: 40vh;
+  min-height: 300px;
+  background: radial-gradient(circle at 0% 0%,
+            rgba(254,255,255,0.445),
+            #d8fdfc,
+            rgba(114,188,91,0.815));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+  position: relative;
+}
+
+.hero-overlay {
+  text-align: center;
+  padding: 2rem;
+  max-width: 800px;
+}
+
+.page-title {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 3.5rem;
+  margin: 0 0 1rem 0;
+  color: var(--black);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: slideLeft 1s ease-out forwards;
+  animation-delay: 0.2s;
+  text-align: center;
+}
+
+.page-subtitle {
+  font-family: 'Akzidenz-Grotesk', Arial, sans-serif;
+  font-size: 1.3rem;
+  color: var(--black);
+  font-style: italic;
+  opacity: 0.8;
+  animation: slideLeft 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+  text-align: center;
+}
+
+/* MAIN PAGE CONTENT */
+.page-content {
+  width: 100%;
+  background: var(--white);
+}
+
+/* CONTENT SECTIONS */
+.content-section {
+  padding: 4rem 2rem;
+  background: var(--white);
+}
+
+.content-section.alt-bg {
+  background: radial-gradient(circle at 50% 0%,
+            rgba(254,255,255,0.445),
+            #d8fdfc,
+            rgba(114,188,91,0.815));
+}
+
+.content-section.center-section {
+  text-align: center;
+}
+
+.section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* SECTION HEADINGS */
+.section-heading {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--black);
+  text-align: center;
+}
+
+.text-content h2 {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--black);
+}
+
+.text-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--black);
+  margin-bottom: 1rem;
+}
+
+/* IMAGE SECTIONS - REPLACED WITH PLACEHOLDERS */
+.placeholder-section {
+  width: 100%;
+  padding: 0;
+  background: #f0f0f0;
+}
+
+.placeholder-box {
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(135deg, #e0e0e0 25%, #f5f5f5 25%, #f5f5f5 50%, #e0e0e0 50%, #e0e0e0 75%, #f5f5f5 75%, #f5f5f5);
+  background-size: 40px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Akzidenz-Grotesk', Arial, sans-serif;
+  font-size: 1.5rem;
+  color: #999;
+  border: 2px dashed #ccc;
+}
+
+.placeholder-box.small {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.placeholder-logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* MISSION AND FOUNDERS GRID (About page) */
+.mission-founders-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.mission-text h2 {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--black);  
+  animation: slideLeft .8s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+.mission-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--black);
+  animation: slideLeft 4s ease-out forwards;
+  animation-delay: 0.1s;
+}
+
+/* FOUNDERS GRID - 2 cards side by side */
+.founders-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.founder-card {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.founder-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* FOUNDER PHOTO PLACEHOLDER - Passport size */
+.founder-photo-placeholder {
+ width: 120px;
+  height: 150px;
+  margin: 0 auto 1rem;
+  background-size: 20px 20px;
+  border: 2px dashed #ffffff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.founder-photo-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 6px;
+}
+.founder-name {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: var(--black);
+  line-height: 1.3;
+}
+
+/* FOUNDER CONTACT ICONS (inline, legacy) */
+.founder-contact {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.contact-icon {
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.contact-icon:hover {
+  transform: scale(1.15);
+}
+
+.icon-placeholder {
+  width: 36px;
+  height: 36px;
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: background 0.3s ease;
+}
+
+.contact-icon:hover .icon-placeholder {
+  background: var(--brown-dark);
+}
+
+/* ===================================================
+   FOUNDER VISUALS (centered) & TRIGGER BUTTONS
+   =================================================== */
+
+.about-tab-visual.founder-visual {
+  background: linear-gradient(135deg, 
+              rgba(114,188,91,0.05), 
+              rgba(216,253,252,0.08));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem 1.5rem;
+  gap: 1rem;
+}
+
+.about-tab-visual.founder-visual img {
+  object-fit: contain;
+  max-width: 70%;
+  max-height: 70%;
+  width: auto;
+  height: auto;
+  margin: auto;
+}
+
+.founder-trigger {
+  background: white;
+  border: 2px solid rgba(114,188,91,0.35);
+  color: var(--black);
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1rem;
+  border-radius: 999px;
+  padding: 0.8rem 1.6rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.founder-trigger:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(114,188,91,0.25);
+  border-color: rgba(114,188,91,0.6);
+}
+
+.founder-trigger.pulse::after {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: 999px;
+  background: rgba(114,188,91,0.15);
+  animation: pulseRing 0.8s ease-out;
+  pointer-events: none;
+}
+
+@keyframes pulseRing {
+  from { transform: scale(0.9); opacity: 0.8; }
+  to   { transform: scale(1.2); opacity: 0; }
+}
+
+/* ===================================================
+   FOUNDER MODAL OVERLAY
+   =================================================== */
+
+.founder-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(6px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.founder-modal.active {
+  display: flex;
+}
+
+.founder-modal-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  width: min(360px, 90vw);
+  box-shadow: 0 16px 50px rgba(0,0,0,0.28);
+  position: relative;
+  text-align: center;
+}
+
+.founder-modal-close {
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
+  background: transparent;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: var(--black);
+  line-height: 1;
+}
+
+.founder-modal-title {
+  margin: 0 0 1.5rem 0;
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1.4rem;
+  color: var(--black);
+}
+
+.founder-modal-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+/* Social buttons (fixed visibility) */
+.founder-modal-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(114,188,91,0.2), rgba(216,253,252,0.35));
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.founder-modal-btn img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  filter: none;
+}
+
+.founder-modal-btn:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 10px 24px rgba(114,188,91,0.25);
+  background: var(--brown);
+}
+
+.founder-modal-btn:hover img {
+  filter: invert(1) brightness(1.1);
+}
+
+.founder-modal-hint {
+  font-size: 0.9rem;
+  color: rgba(0,0,0,0.65);
+  margin: 0;
+}
+
+/* ===================================================
+   IMAGE GALLERY SECTION (About Page - NEW)
+   =================================================== */
+
+.image-gallery-section {
+  width: 100%;
+  padding: 4rem 2rem;
+  background: radial-gradient(circle at 50% 0%,
+            rgba(254,255,255,0.445),
+            #d8fdfc,
+            rgba(168, 218, 154, 0.815));
+}
+
+.gallery-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Individual Gallery Card */
+.gallery-card {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* Image Container */
+.gallery-image-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.4s ease-in-out;
+}
+
+/* Overlay that slides in from left */
+.gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(24, 98, 24, 0.92);
+  transform: translateX(-100%);
+  transition: transform 0.4s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.gallery-card:hover .gallery-overlay {
+  transform: translateX(0);
+}
+
+/* Overlay Content */
+.overlay-title {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1.8rem;
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 0.75rem;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.3s ease 0.2s, transform 0.3s ease 0.2s;
+}
+
+.gallery-card:hover .overlay-title {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.overlay-description {
+  font-size: 1rem;
+  color: var(--white);
+  text-align: center;
+  line-height: 1.6;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.3s ease 0.3s, transform 0.3s ease 0.3s;
+}
+
+.gallery-card:hover .overlay-description {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Logo decoration */
+.overlay-logo {
+  position: absolute;
+  bottom: 1rem;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease 0.4s, transform 0.3s ease 0.4s;
+}
+
+.gallery-card:hover .overlay-logo {
+  opacity: 0.6;
+  transform: translateY(0);
+}
+
+/* ===================================================
+   INTERACTIVE CONTACT SECTION
+   =================================================== */
+
+.contact-section-interactive {
+  text-align: center;
+}
+
+.contact-subtitle {
+  font-size: 1.2rem;
+  color: var(--black);
+  opacity: 0.8;
+  margin-bottom: 3rem;
+  font-style: italic;
+}
+
+.contact-buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Contact Button Cards */
+.contact-button-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.contact-button-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(114,188,91,0.1), rgba(216,253,252,0.2));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+}
+
+.contact-button-card:hover::before {
+  opacity: 1;
+}
+
+.contact-button-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(114,188,91,0.3);
+}
+
+/* Icon Wrapper */
+.contact-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, rgba(114,188,91,0.2), rgba(216,253,252,0.3));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-button-card:hover .contact-icon-wrapper {
+  background: linear-gradient(135deg, rgba(114,188,91,0.4), rgba(216,253,252,0.5));
+  transform: rotate(360deg) scale(1.1);
+}
+
+.contact-icon-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* Button Text */
+.contact-button-title {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1.5rem;
+  color: var(--black);
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+.contact-button-card:hover .contact-button-title {
+  color: var(--brown);
+}
+
+.contact-button-text {
+  font-size: 1.1rem;
+  color: var(--black);
+  opacity: 0.8;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+  word-break: break-word;
+}
+
+/* Arrow Indicator */
+.contact-button-arrow {
+  font-size: 2rem;
+  color: var(--brown);
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-button-card:hover .contact-button-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ===================================================
+   FOOTER SECTION
+   =================================================== */
+
+.site-footer {
+  background: linear-gradient(135deg, 
+              rgba(255,255,255,1) 0%, 
+              rgba(216,253,252,0.6) 30%, 
+              rgba(114,188,91,0.4) 70%, 
+              rgba(168,218,154,0.5) 100%);
+  color: var(--black);
+  padding: 4rem 2rem 1rem;
+  margin-top: 0;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+/* Footer Brand */
+.footer-brand {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.footer-logo {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.brand-line-1 {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--black);
+  letter-spacing: 2px;
+}
+
+.brand-line-2 {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--black);
+  letter-spacing: 2px;
+}
+
+.brand-motto {
+  font-family: 'Akzidenz-Grotesk', Arial, sans-serif;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--black);
+  opacity: 0.8;
+  letter-spacing: 3px;
+  margin-top: 0.25rem;
+}
+
+/* Footer Links */
+.footer-links h3,
+.footer-contact h3,
+.footer-social h3 {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--black);
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+  color: var(--black);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  display: inline-block;
+}
+
+.footer-links a:hover {
+  color: var(--brown);
+  transform: translateX(5px);
+}
+
+/* Footer Contact */
+.footer-contact p {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.footer-contact a {
+  color: var(--brown);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-contact a:hover {
+  color: var(--brown-dark);
+  text-decoration: underline;
+}
+
+/* Footer Social */
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.social-icons a:hover {
+  background: var(--brown);
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  border-top: 2px solid rgba(0,0,0,0.1);
+  padding-top: 1.5rem;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 0.95rem;
+  color: var(--black);
+  opacity: 0.8;
+  margin: 0;
+}
+
+/* ===================================================
+   INTERACTIVE SCROLL HERO SECTION (About Page)
+   =================================================== */
+
+.about-scroll-wrapper {
+  position: relative;
+  background: white;
+  margin-top: 0;
+}
+
+/* Pinned Intro Section */
+.about-intro {
+  position: relative;
+  height: 60vh;
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+}
+
+.about-intro-content {
+  max-width: 700px;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.about-intro-title {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--black);
+  margin-bottom: 1rem;
+}
+
+.green-highlight {
+  color: rgba(114,188,91,1);
+  position: relative;
+  display: inline-block;
+}
+
+.about-intro-subtitle {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--black);
+  opacity: 0.7;
+  margin-bottom: 0;
+}
+
+/* Tabs Section */
+.about-tabs-section {
+  position: relative;
+  z-index: 2;
+  border-radius: 1.5rem;
+  background-color: white;
+  box-shadow: 0 -10px 30px rgba(0,0,0,0.05);
+}
+
+.about-tabs-height {
+  height: 2400vh; /* increased for longer runway */
+}
+
+.about-tabs-sticky {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  padding: 3rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.about-tabs-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.about-tabs-component {
+  height: 70vh;
+  max-height: 600px;
+  display: grid;
+  grid-template-columns: 0.45fr 1fr;
+  gap: 2rem;
+  background: white;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+}
+
+/* Left Side - Text Content */
+.about-tabs-left {
+  background: linear-gradient(135deg, 
+              rgba(114,188,91,0.05), 
+              rgba(216,253,252,0.08));
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-tabs-left-top {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.about-tab-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  pointer-events: none;
+}
+
+.about-tab-content.is-active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  z-index: 10;
+}
+
+.about-tab-heading {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--black);
+  margin-bottom: 1rem;
+}
+
+.text-green {
+  color: rgba(114,188,91,1);
+}
+
+.about-tab-line {
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(90deg, 
+              transparent, 
+              rgba(114,188,91,0.5), 
+              transparent);
+  margin: 0 auto 1rem;
+}
+
+.about-tab-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--black);
+  opacity: 0.8;
+}
+
+.about-tab-text strong {
+  color: rgba(114,188,91,1);
+  font-weight: 600;
+}
+
+/* Smaller text for long sections (Core Values, What We Do, Our History) */
+.about-tab-content:nth-child(4) .about-tab-text,
+.about-tab-content:nth-child(8) .about-tab-text,
+.about-tab-content:nth-child(10) .about-tab-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Founder Contact Links (Inline) */
+.founder-contact-inline {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.contact-icon-inline {
+  width: 35px;
+  height: 35px;
+  background: rgba(114,188,91,0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.contact-icon-inline:hover {
+  background: rgba(114,188,91,0.3);
+  transform: scale(1.1);
+}
+
+.contact-icon-inline img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* Right Side - Visual Content */
+.about-tabs-right {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background: #f8f8f8;
+}
+
+.about-tab-visual {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  opacity: 0;
+  transform: scale(0.98);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  pointer-events: none;
+}
+
+.about-tab-visual.is-active {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+  z-index: 10;
+}
+
+.about-tab-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Visual Overlay Elements */
+.visual-overlay {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 20;
+}
+
+.visual-badge {
+  background: rgba(114,188,91,0.95);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 2rem;
+  font-family: 'ITC Benguiat', serif;
+  font-size: 0.9rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Placeholder Images Styling */
+.about-tab-visual img[src*="placeholder"] {
+  background: linear-gradient(135deg, #e0e0e0 25%, #f5f5f5 25%, #f5f5f5 50%, #e0e0e0 50%);
+  background-size: 40px 40px;
+}
+
+
+/* ===================================================
+   EVENTS PAGE STYLES
+   =================================================== */
+
+.intro-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.intro-content.center-text {
+  text-align: center;
+}
+
+/* Program Cards with Icons */
+.program-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(114,188,91,0.1), rgba(216,253,252,0.2));
+  border-radius: 50%;
+  padding: 1rem;
+}
+
+.program-icon img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+/* Events Timeline */
+.events-timeline {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.event-card {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateX(10px);
+  box-shadow: 0 6px 20px rgba(114,188,91,0.2);
+}
+
+.event-date {
+  background: linear-gradient(135deg, rgba(114,188,91,1), rgba(168,218,154,1));
+  color: white;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100px;
+}
+
+.date-day {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.date-month {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 0.5rem;
+}
+
+.event-details h3 {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--black);
+}
+
+.event-location {
+  font-size: 1rem;
+  color: rgba(114,188,91,1);
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.event-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--black);
+  opacity: 0.8;
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, rgba(114,188,91,0.1), rgba(216,253,252,0.2));
+  text-align: center;
+}
+
+.cta-content h2 {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--black);
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  opacity: 0.8;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-large {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.btn-primary {
+  background: rgba(114,188,91,1);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: rgba(114,188,91,0.85);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(114,188,91,0.3);
+}
+
+.btn-secondary {
+  background: white;
+  color: rgba(114,188,91,1);
+  border: 2px solid rgba(114,188,91,1);
+}
+
+.btn-secondary:hover {
+  background: rgba(114,188,91,1);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(114,188,91,0.3);
+}
+
+/* ===================================================
+   GET INVOLVED PAGE STYLES
+   =================================================== */
+
+.involvement-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.involvement-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.involvement-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(114,188,91,0.2);
+}
+
+.involvement-card.featured {
+  border: 3px solid rgba(114,188,91,1);
+  background: linear-gradient(135deg, rgba(114,188,91,0.05), rgba(216,253,252,0.1));
+}
+
+.featured-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(114,188,91,1);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.involvement-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  background: linear-gradient(135deg, rgba(114,188,91,0.1), rgba(216,253,252,0.2));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.involvement-icon img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+.involvement-card h3 {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--black);
+}
+
+.involvement-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--black);
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+}
+
+.involvement-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  text-align: left;
+}
+
+.involvement-list li {
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  position: relative;
+  font-size: 0.95rem;
+  color: var(--black);
+  opacity: 0.8;
+}
+
+.involvement-list li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: rgba(114,188,91,1);
+  font-weight: bold;
+}
+
+.btn-involvement {
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  background: rgba(114,188,91,1);
+  color: white;
+  font-family: 'Akzidenz-Grotesk', Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.btn-involvement:hover {
+  background: rgba(114,188,91,0.85);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(114,188,91,0.3);
+}
+
+/* Form Rows */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.form-group select {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 2px solid rgba(0,0,0,0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  transition: border-color 0.3s ease;
+}
+
+.form-group select:focus {
+  outline: none;
+  border-color: rgba(114,188,91,1);
+}
+
+/* Social Share Section */
+.share-content {
+  text-align: center;
+}
+
+.social-share-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.share-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background: white;
+  color: var(--black);
+  border: 2px solid rgba(0,0,0,0.1);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.share-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+.share-btn.facebook:hover {
+  background: #1877f2;
+  color: white;
+  border-color: #1877f2;
+}
+
+.share-btn.twitter:hover {
+  background: #1da1f2;
+  color: white;
+  border-color: #1da1f2;
+}
+
+.share-btn.linkedin:hover {
+  background: #0077b5;
+  color: white;
+  border-color: #0077b5;
+}
+
+/* ===================================================
+   DONATE PAGE STYLES - ECOLIGHT INSPIRED
+   =================================================== */
+
+/* Payment Selection Section */
+.payment-selection-section {
+  background: white;
+}
+
+.payment-methods-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.payment-method-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  position: relative;
+  border: 3px solid transparent;
+}
+
+.payment-method-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(114,188,91,0.25);
+  border-color: rgba(114,188,91,0.3);
+}
+
+.payment-method-card.featured {
+  border-color: rgba(114,188,91,1);
+  background: linear-gradient(135deg, rgba(114,188,91,0.05), rgba(216,253,252,0.1));
+}
+
+.featured-label {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(114,188,91,1);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.payment-method-icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 1.5rem;
+  background: linear-gradient(135deg, rgba(114,188,91,0.1), rgba(216,253,252,0.2));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.payment-method-icon img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.payment-method-card h3 {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: var(--black);
+}
+
+.payment-method-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--black);
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+}
+
+.payment-badge {
+  display: inline-block;
+  background: rgba(114,188,91,0.1);
+  color: rgba(114,188,91,1);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.payment-btn {
+  padding: 1rem 2.5rem;
+  background: white;
+  color: rgba(114,188,91,1);
+  border: 2px solid rgba(114,188,91,1);
+  border-radius: 8px;
+  font-family: 'Akzidenz-Grotesk', Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.payment-btn:hover {
+  background: rgba(114,188,91,1);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.payment-btn.btn-primary {
+  background: rgba(114,188,91,1);
+  color: white;
+}
+
+.payment-btn.btn-primary:hover {
+  background: rgba(114,188,91,0.85);
+}
+
+/* Impact Showcase */
+.impact-showcase {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.impact-item {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.impact-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(114,188,91,0.2);
+}
+
+.impact-item.featured {
+  border: 3px solid rgba(114,188,91,1);
+}
+
+.impact-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #e0e0e0 25%, #f5f5f5 25%);
+  background-size: 40px 40px;
+}
+
+.impact-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.impact-details {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.impact-amount {
+  display: inline-block;
+  background: rgba(114,188,91,1);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.impact-details h3 {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+  color: var(--black);
+}
+
+.impact-details p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--black);
+  opacity: 0.8;
+}
+
+/* Why Donate Grid */
+.why-donate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.why-donate-card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.why-donate-card:hover {
+  transform: translateY(-5px);
+}
+
+.why-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.why-donate-card h3 {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--black);
+}
+
+.why-donate-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--black);
+  opacity: 0.8;
+}
+
+/* ===================================================
+   PAYMENT MODALS
+   =================================================== */
+
+.payment-modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  backdrop-filter: blur(5px);
+  overflow-y: auto;
+}
+
+.payment-modal.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.modal-content {
+  background: white;
+  padding: 3rem;
+  border-radius: 16px;
+  max-width: 700px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.close-modal {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--black);
+  cursor: pointer;
+  transition: color 0.3s ease;
+  line-height: 1;
+}
+
+.close-modal:hover {
+  color: rgba(114,188,91,1);
+}
+
+.modal-content h2 {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--black);
+  text-align: center;
+}
+
+.modal-description {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--black);
+  opacity: 0.8;
+  margin-bottom: 2rem;
+}
+
+/* Provider Options */
+.provider-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.provider-card {
+  background: linear-gradient(135deg, rgba(114,188,91,0.05), rgba(216,253,252,0.1));
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  border: 2px solid rgba(114,188,91,0.2);
+  transition: all 0.3s ease;
+}
+
+.provider-card:hover {
+  border-color: rgba(114,188,91,1);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(114,188,91,0.2);
+}
+
+.provider-logo {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1rem;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.provider-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.provider-card h3 {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: var(--black);
+}
+
+.provider-card p {
+  font-size: 0.9rem;
+  color: var(--black);
+  opacity: 0.7;
+  margin-bottom: 0.75rem;
+}
+
+.payment-number {
+  display: inline-block;
+  background: rgba(114,188,91,1);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+  letter-spacing: 1px;
+}
+
+.provider-instructions {
+  font-size: 0.85rem;
+  color: var(--black);
+  opacity: 0.7;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+/* PayPal Options */
+.paypal-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.paypal-option-btn {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: white;
+  border: 2px solid rgba(0,0,0,0.1);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.paypal-option-btn:hover {
+  border-color: rgba(114,188,91,1);
+  background: rgba(114,188,91,0.05);
+  transform: translateX(5px);
+}
+
+.option-icon {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, rgba(114,188,91,0.1), rgba(216,253,252,0.2));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+}
+
+.option-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.option-text h3 {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--black);
+}
+
+.option-text p {
+  font-size: 0.95rem;
+  color: var(--black);
+  opacity: 0.8;
+  margin: 0.25rem 0;
+}
+
+.option-note {
+  font-size: 0.85rem;
+  color: rgba(114,188,91,1);
+  font-weight: 600;
+}
+
+/* Bank Details Card */
+.bank-details-card {
+  background: linear-gradient(135deg, rgba(114,188,91,0.05), rgba(216,253,252,0.1));
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.bank-details-card h3 {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  color: var(--black);
+  text-align: center;
+}
+
+.bank-info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.bank-info-row:last-child {
+  border-bottom: none;
+}
+
+.info-label {
+  font-weight: 600;
+  color: var(--black);
+}
+
+.info-value {
+  color: var(--black);
+  opacity: 0.8;
+  text-align: right;
+}
+
+/* Modal Footer Instructions */
+.modal-footer-instructions {
+  background: rgba(114,188,91,0.05);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.modal-footer-instructions p {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.modal-footer-instructions ol {
+  margin: 1rem 0 0 1.5rem;
+  line-height: 1.8;
+}
+
+.modal-footer-instructions a {
+  color: rgba(114,188,91,1);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.modal-footer-instructions a:hover {
+  text-decoration: underline;
+}
+
+.security-note {
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--black);
+  opacity: 0.8;
+}
+
+.note {
+  font-size: 0.9rem;
+  color: var(--black);
+  opacity: 0.7;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+/* ===================================================
+    FOUNDER CONTACT ICONS & SCROLL HEIGHTS (legacy)
+   =================================================== */
+
+.founder-contact-overlay {
+  position: absolute;
+  bottom: 4.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.75rem;
+  z-index: 25;
+}
+
+.contact-icon-overlay {
+  width: 45px;
+  height: 45px;
+  background: #eaeaea;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.contact-icon-overlay:hover {
+  background: rgba(114,188,91,0.95);
+  transform: scale(1.15);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+}
+
+.contact-icon-overlay img {
+  width: 22px !important;
+  height: 22px !important;
+  object-fit: contain;
+  display: block;
+  opacity: 1 !important;
+}
+
+/* UPDATED: Scroll Heights - Fixed for better visibility */
+.about-tabs-height {
+  height: 2400vh;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .about-tabs-height {
+    height: 2200vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-tabs-height {
+    height: 2000vh;
+  }
+  
+  .founder-contact-overlay {
+    bottom: 4rem;
+  }
+  
+  .contact-icon-overlay {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .contact-icon-overlay img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* ===================================================
+   RESPONSIVE - NEW PAGES
+   =================================================== */
+
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .event-card {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .event-date {
+    min-height: auto;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-large {
+    width: 100%;
+    text-align: center;
+  }
+
+  .involvement-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .social-share-buttons {
+    flex-direction: column;
+  }
+
+  .payment-methods-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .impact-showcase {
+    grid-template-columns: 1fr;
+  }
+
+  .provider-options {
+    grid-template-columns: 1fr;
+  }
+
+  .paypal-option-btn {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .modal-content {
+    padding: 2rem 1.5rem;
+    margin: 1rem;
+  }
+}
+
+/* ===================================================
+   RESPONSIVE - SCROLL HERO SECTION
+   =================================================== */
+
+@media (max-width: 1024px) {
+  .about-tabs-component {
+    grid-template-columns: 1fr;
+    height: auto;
+    max-height: none;
+  }
+
+  .about-tabs-left {
+    min-height: 50vh;
+  }
+
+  .about-tabs-right {
+    min-height: 40vh;
+  }
+
+  .about-tabs-height {
+    height: 1400vh;
+  }
+
+  .about-tabs-sticky {
+    padding: 2rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-intro {
+    height: 50vh;
+    min-height: 300px;
+  }
+
+  .about-intro-title {
+    font-size: 2rem;
+  }
+
+  .about-intro-subtitle {
+    font-size: 1rem;
+  }
+
+  .about-tab-heading {
+    font-size: 1.6rem;
+  }
+
+  .about-tab-text {
+    font-size: 0.95rem;
+  }
+
+  /* Stack text above visual instead of hiding */
+  .about-tabs-component {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    max-height: none;
+  }
+
+  .about-tabs-left {
+    padding: 1.5rem;
+    min-height: auto;
+  }
+
+  .about-tabs-right {
+    display: block;
+    position: relative;
+    min-height: 45vh;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .about-tab-visual {
+    position: relative;
+    height: 45vh;
+  }
+
+  .about-tab-visual img {
+    object-fit: cover;
+  }
+
+  .about-tabs-container {
+    padding: 0 1rem;
+  }
+
+  .about-tabs-height {
+    height: 1200vh;
+  }
+
+  .about-tabs-component {
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  }
+}
+
+/* ===================================================
+   RESPONSIVE - CONTACT & FOOTER
+   =================================================== */
+
+@media (max-width: 768px) {
+  .contact-buttons-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .contact-button-card {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .contact-icon-wrapper {
+    width: 70px;
+    height: 70px;
+  }
+
+  .contact-icon-img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-brand {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .brand-text {
+    align-items: center;
+  }
+
+  .footer-links,
+  .footer-contact,
+  .footer-social {
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .site-footer {
+    padding: 3rem 1.5rem 1rem;
+  }
+}
+
+/* RESPONSIVE STYLES */
+@media (max-width: 768px) {
+  .page-title { font-size: 2.5rem; }
+  .page-subtitle { font-size: 1.1rem; }
+  .section-heading { font-size: 2rem; }
+  .programs-grid,
+  .plans-container,
+  .contact-info-block,
+  .impact-grid,
+  .mission-founders-grid { grid-template-columns: 1fr; }
+  .founders-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .plan-block,
+  .program-card,
+  .contact-card,
+  .impact-card { padding: 1.5rem; }
+  .content-section { padding: 3rem 1.5rem; }
+  .page-hero { height: 35vh; margin-top: 0; }
+  .btn-donate-large { font-size: 1.2rem; padding: 1rem 2.5rem; }
+  .placeholder-box { height: 250px; font-size: 1.2rem; }
+  .placeholder-box.small { width: 200px; height: 200px; }
+  .gallery-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .image-gallery-section { padding: 3rem 1.5rem; }
+  .overlay-title { font-size: 1.5rem; }
+}
+
+@media (max-width: 1024px) {
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+}
+
+.linkedin { width: 20px; height: 20px; }
+.gmail { width: 20px; height: 20px; }
+/* -------------------------------------------------
+   PAGES.CSS – Styling for all pages except index.html
+   Uses the gradient color scheme from index.html
+   ------------------------------------------------- */
+
+/* FIX HEADER - NOT STICKY ON NON-INDEX PAGES */
+body:not(.home) .site-header {
+  position: relative;
+  top: 0;
+}
+
+/* Prevent background scroll when modal is open */
+body.modal-open { overflow: hidden; }
+
+/* PAGE HERO SECTION */
+.page-hero {
+  width: 100%;
+  height: 40vh;
+  min-height: 300px;
+  background: radial-gradient(circle at 0% 0%,
+            rgba(254,255,255,0.445),
+            #d8fdfc,
+            rgba(114,188,91,0.815));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+  position: relative;
+}
+
+.hero-overlay {
+  text-align: center;
+  padding: 2rem;
+  max-width: 800px;
+}
+
+.page-title {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 3.5rem;
+  margin: 0 0 1rem 0;
+  color: var(--black);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: slideLeft 1s ease-out forwards;
+  animation-delay: 0.2s;
+  text-align: center;
+}
+
+.page-subtitle {
+  font-family: 'Akzidenz-Grotesk', Arial, sans-serif;
+  font-size: 1.3rem;
+  color: var(--black);
+  font-style: italic;
+  opacity: 0.8;
+  animation: slideLeft 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+  text-align: center;
+}
+
+/* MAIN PAGE CONTENT */
+.page-content {
+  width: 100%;
+  background: var(--white);
+}
+
+/* CONTENT SECTIONS */
+.content-section {
+  padding: 4rem 2rem;
+  background: var(--white);
+}
+
+.content-section.alt-bg {
+  background: radial-gradient(circle at 50% 0%,
+            rgba(254,255,255,0.445),
+            #d8fdfc,
+            rgba(114,188,91,0.815));
+}
+
+.content-section.center-section {
+  text-align: center;
+}
+
+.section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* SECTION HEADINGS */
+.section-heading {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--black);
+  text-align: center;
+}
+
+.text-content h2 {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--black);
+}
+
+.text-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--black);
+  margin-bottom: 1rem;
+}
+
+/* IMAGE SECTIONS - REPLACED WITH PLACEHOLDERS */
+.placeholder-section {
+  width: 100%;
+  padding: 0;
+  background: #f0f0f0;
+}
+
+.placeholder-box {
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(135deg, #e0e0e0 25%, #f5f5f5 25%, #f5f5f5 50%, #e0e0e0 50%, #e0e0e0 75%, #f5f5f5 75%, #f5f5f5);
+  background-size: 40px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Akzidenz-Grotesk', Arial, sans-serif;
+  font-size: 1.5rem;
+  color: #999;
+  border: 2px dashed #ccc;
+}
+
+.placeholder-box.small {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.placeholder-logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* MISSION AND FOUNDERS GRID (About page) */
+.mission-founders-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.mission-text h2 {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--black);  
+  animation: slideLeft .8s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+.mission-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--black);
+  animation: slideLeft 4s ease-out forwards;
+  animation-delay: 0.1s;
+}
+
+/* FOUNDERS GRID - 2 cards side by side */
+.founders-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.founder-card {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.founder-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* FOUNDER PHOTO PLACEHOLDER - Passport size */
+.founder-photo-placeholder {
+ width: 120px;
+  height: 150px;
+  margin: 0 auto 1rem;
+  background-size: 20px 20px;
+  border: 2px dashed #ffffff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.founder-photo-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 6px;
+}
+.founder-name {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: var(--black);
+  line-height: 1.3;
+}
+
+/* FOUNDER CONTACT ICONS (inline, legacy) */
+.founder-contact {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.contact-icon {
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.contact-icon:hover {
+  transform: scale(1.15);
+}
+
+.icon-placeholder {
+  width: 36px;
+  height: 36px;
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: background 0.3s ease;
+}
+
+.contact-icon:hover .icon-placeholder {
+  background: var(--brown-dark);
+}
+
+/* ===================================================
+   FOUNDER VISUALS (centered) & TRIGGER BUTTONS
+   =================================================== */
+
+.about-tab-visual.founder-visual {
+  background: linear-gradient(135deg, 
+              rgba(114,188,91,0.05), 
+              rgba(216,253,252,0.08));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem 1.5rem;
+  gap: 1rem;
+}
+
+.about-tab-visual.founder-visual img {
+  object-fit: contain;
+  max-width: 70%;
+  max-height: 70%;
+  width: auto;
+  height: auto;
+  margin: auto;
+}
+
+.founder-trigger {
+  background: white;
+  border: 2px solid rgba(114,188,91,0.35);
+  color: var(--black);
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1rem;
+  border-radius: 999px;
+  padding: 0.8rem 1.6rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.founder-trigger:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(114,188,91,0.25);
+  border-color: rgba(114,188,91,0.6);
+}
+
+.founder-trigger.pulse::after {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: 999px;
+  background: rgba(114,188,91,0.15);
+  animation: pulseRing 0.8s ease-out;
+  pointer-events: none;
+}
+
+@keyframes pulseRing {
+  from { transform: scale(0.9); opacity: 0.8; }
+  to   { transform: scale(1.2); opacity: 0; }
+}
+
+/* ===================================================
+   FOUNDER MODAL OVERLAY
+   =================================================== */
+
+.founder-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(6px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.founder-modal.active {
+  display: flex;
+}
+
+.founder-modal-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  width: min(360px, 90vw);
+  box-shadow: 0 16px 50px rgba(0,0,0,0.28);
+  position: relative;
+  text-align: center;
+}
+
+.founder-modal-close {
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
+  background: transparent;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: var(--black);
+  line-height: 1;
+}
+
+.founder-modal-title {
+  margin: 0 0 1.5rem 0;
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1.4rem;
+  color: var(--black);
+}
+
+.founder-modal-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+/* Social buttons (fixed visibility) */
+.founder-modal-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(114,188,91,0.2), rgba(216,253,252,0.35));
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.founder-modal-btn img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  filter: none;
+}
+
+.founder-modal-btn:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 10px 24px rgba(114,188,91,0.25);
+  background: var(--brown);
+}
+
+.founder-modal-btn:hover img {
+  filter: invert(1) brightness(1.1);
+}
+
+.founder-modal-hint {
+  font-size: 0.9rem;
+  color: rgba(0,0,0,0.65);
+  margin: 0;
+}
+
+/* ===================================================
+   IMAGE GALLERY SECTION (About Page - NEW)
+   =================================================== */
+
+.image-gallery-section {
+  width: 100%;
+  padding: 4rem 2rem;
+  background: radial-gradient(circle at 50% 0%,
+            rgba(254,255,255,0.445),
+            #d8fdfc,
+            rgba(168, 218, 154, 0.815));
+}
+
+.gallery-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Individual Gallery Card */
+.gallery-card {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* Image Container */
+.gallery-image-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.4s ease-in-out;
+}
+
+/* Overlay that slides in from left */
+.gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(24, 98, 24, 0.92);
+  transform: translateX(-100%);
+  transition: transform 0.4s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.gallery-card:hover .gallery-overlay {
+  transform: translateX(0);
+}
+
+/* Overlay Content */
+.overlay-title {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1.8rem;
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 0.75rem;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.3s ease 0.2s, transform 0.3s ease 0.2s;
+}
+
+.gallery-card:hover .overlay-title {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.overlay-description {
+  font-size: 1rem;
+  color: var(--white);
+  text-align: center;
+  line-height: 1.6;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.3s ease 0.3s, transform 0.3s ease 0.3s;
+}
+
+.gallery-card:hover .overlay-description {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Logo decoration */
+.overlay-logo {
+  position: absolute;
+  bottom: 1rem;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease 0.4s, transform 0.3s ease 0.4s;
+}
+
+.gallery-card:hover .overlay-logo {
+  opacity: 0.6;
+  transform: translateY(0);
+}
+
+/* ===================================================
+   INTERACTIVE CONTACT SECTION
+   =================================================== */
+
+.contact-section-interactive {
+  text-align: center;
+}
+
+.contact-subtitle {
+  font-size: 1.2rem;
+  color: var(--black);
+  opacity: 0.8;
+  margin-bottom: 3rem;
+  font-style: italic;
+}
+
+.contact-buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Contact Button Cards */
+.contact-button-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.contact-button-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(114,188,91,0.1), rgba(216,253,252,0.2));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+}
+
+.contact-button-card:hover::before {
+  opacity: 1;
+}
+
+.contact-button-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(114,188,91,0.3);
+}
+
+/* Icon Wrapper */
+.contact-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, rgba(114,188,91,0.2), rgba(216,253,252,0.3));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-button-card:hover .contact-icon-wrapper {
+  background: linear-gradient(135deg, rgba(114,188,91,0.4), rgba(216,253,252,0.5));
+  transform: rotate(360deg) scale(1.1);
+}
+
+.contact-icon-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* Button Text */
+.contact-button-title {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1.5rem;
+  color: var(--black);
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+.contact-button-card:hover .contact-button-title {
+  color: var(--brown);
+}
+
+.contact-button-text {
+  font-size: 1.1rem;
+  color: var(--black);
+  opacity: 0.8;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+  word-break: break-word;
+}
+
+/* Arrow Indicator */
+.contact-button-arrow {
+  font-size: 2rem;
+  color: var(--brown);
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-button-card:hover .contact-button-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ===================================================
+   FOOTER SECTION
+   =================================================== */
+
+.site-footer {
+  background: linear-gradient(135deg, 
+              rgba(255,255,255,1) 0%, 
+              rgba(216,253,252,0.6) 30%, 
+              rgba(114,188,91,0.4) 70%, 
+              rgba(168,218,154,0.5) 100%);
+  color: var(--black);
+  padding: 4rem 2rem 1rem;
+  margin-top: 0;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+/* Footer Brand */
+.footer-brand {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.footer-logo {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.brand-line-1 {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--black);
+  letter-spacing: 2px;
+}
+
+.brand-line-2 {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--black);
+  letter-spacing: 2px;
+}
+
+.brand-motto {
+  font-family: 'Akzidenz-Grotesk', Arial, sans-serif;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--black);
+  opacity: 0.8;
+  letter-spacing: 3px;
+  margin-top: 0.25rem;
+}
+
+/* Footer Links */
+.footer-links h3,
+.footer-contact h3,
+.footer-social h3 {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--black);
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+  color: var(--black);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  display: inline-block;
+}
+
+.footer-links a:hover {
+  color: var(--brown);
+  transform: translateX(5px);
+}
+
+/* Footer Contact */
+.footer-contact p {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.footer-contact a {
+  color: var(--brown);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-contact a:hover {
+  color: var(--brown-dark);
+  text-decoration: underline;
+}
+
+/* Footer Social */
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.social-icons a:hover {
+  background: var(--brown);
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  border-top: 2px solid rgba(0,0,0,0.1);
+  padding-top: 1.5rem;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 0.95rem;
+  color: var(--black);
+  opacity: 0.8;
+  margin: 0;
+}
+
+/* ===================================================
+   INTERACTIVE SCROLL HERO SECTION (About Page)
+   =================================================== */
+
+.about-scroll-wrapper {
+  position: relative;
+  background: white;
+  margin-top: 0;
+}
+
+/* Pinned Intro Section */
+.about-intro {
+  position: relative;
+  height: 60vh;
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+}
+
+.about-intro-content {
+  max-width: 700px;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.about-intro-title {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--black);
+  margin-bottom: 1rem;
+}
+
+.green-highlight {
+  color: rgba(114,188,91,1);
+  position: relative;
+  display: inline-block;
+}
+
+.about-intro-subtitle {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--black);
+  opacity: 0.7;
+  margin-bottom: 0;
+}
+
+/* Tabs Section */
+.about-tabs-section {
+  position: relative;
+  z-index: 2;
+  border-radius: 1.5rem;
+  background-color: white;
+  box-shadow: 0 -10px 30px rgba(0,0,0,0.05);
+}
+
+.about-tabs-height {
+  height: 2400vh; /* increased for longer runway */
+}
+
+.about-tabs-sticky {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  padding: 3rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.about-tabs-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.about-tabs-component {
+  height: 70vh;
+  max-height: 600px;
+  display: grid;
+  grid-template-columns: 0.45fr 1fr;
+  gap: 2rem;
+  background: white;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+}
+
+/* Left Side - Text Content */
+.about-tabs-left {
+  background: linear-gradient(135deg, 
+              rgba(114,188,91,0.05), 
+              rgba(216,253,252,0.08));
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-tabs-left-top {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.about-tab-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  pointer-events: none;
+}
+
+.about-tab-content.is-active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  z-index: 10;
+}
+
+.about-tab-heading {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--black);
+  margin-bottom: 1rem;
+}
+
+.text-green {
+  color: rgba(114,188,91,1);
+}
+
+.about-tab-line {
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(90deg, 
+              transparent, 
+              rgba(114,188,91,0.5), 
+              transparent);
+  margin: 0 auto 1rem;
+}
+
+.about-tab-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--black);
+  opacity: 0.8;
+}
+
+.about-tab-text strong {
+  color: rgba(114,188,91,1);
+  font-weight: 600;
+}
+
+/* Smaller text for long sections (Core Values, What We Do, Our History) */
+.about-tab-content:nth-child(4) .about-tab-text,
+.about-tab-content:nth-child(8) .about-tab-text,
+.about-tab-content:nth-child(10) .about-tab-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Founder Contact Links (Inline) */
+.founder-contact-inline {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.contact-icon-inline {
+  width: 35px;
+  height: 35px;
+  background: rgba(114,188,91,0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.contact-icon-inline:hover {
+  background: rgba(114,188,91,0.3);
+  transform: scale(1.1);
+}
+
+.contact-icon-inline img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* Right Side - Visual Content */
+.about-tabs-right {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background: #f8f8f8;
+}
+
+.about-tab-visual {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  opacity: 0;
+  transform: scale(0.98);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  pointer-events: none;
+}
+
+.about-tab-visual.is-active {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+  z-index: 10;
+}
+
+.about-tab-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Visual Overlay Elements */
+.visual-overlay {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 20;
+}
+
+.visual-badge {
+  background: rgba(114,188,91,0.95);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 2rem;
+  font-family: 'ITC Benguiat', serif;
+  font-size: 0.9rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Placeholder Images Styling */
+.about-tab-visual img[src*="placeholder"] {
+  background: linear-gradient(135deg, #e0e0e0 25%, #f5f5f5 25%, #f5f5f5 50%, #e0e0e0 50%);
+  background-size: 40px 40px;
+}
+
+/* ===================================================
+   EVENTS PAGE STYLES
+   =================================================== */
+
+.intro-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.intro-content.center-text {
+  text-align: center;
+}
+
+/* Program Cards with Icons */
+.program-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(114,188,91,0.1), rgba(216,253,252,0.2));
+  border-radius: 50%;
+  padding: 1rem;
+}
+
+.program-icon img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+/* Events Timeline */
+.events-timeline {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.event-card {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateX(10px);
+  box-shadow: 0 6px 20px rgba(114,188,91,0.2);
+}
+
+.event-date {
+  background: linear-gradient(135deg, rgba(114,188,91,1), rgba(168,218,154,1));
+  color: white;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100px;
+}
+
+.date-day {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.date-month {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 0.5rem;
+}
+
+.event-details h3 {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--black);
+}
+
+.event-location {
+  font-size: 1rem;
+  color: rgba(114,188,91,1);
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.event-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--black);
+  opacity: 0.8;
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, rgba(114,188,91,0.1), rgba(216,253,252,0.2));
+  text-align: center;
+}
+
+.cta-content h2 {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--black);
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  opacity: 0.8;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-large {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.btn-primary {
+  background: rgba(114,188,91,1);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: rgba(114,188,91,0.85);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(114,188,91,0.3);
+}
+
+.btn-secondary {
+  background: white;
+  color: rgba(114,188,91,1);
+  border: 2px solid rgba(114,188,91,1);
+}
+
+.btn-secondary:hover {
+  background: rgba(114,188,91,1);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(114,188,91,0.3);
+}
+
+/* ===================================================
+   GET INVOLVED PAGE STYLES
+   =================================================== */
+
+.involvement-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.involvement-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.involvement-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(114,188,91,0.2);
+}
+
+.involvement-card.featured {
+  border: 3px solid rgba(114,188,91,1);
+  background: linear-gradient(135deg, rgba(114,188,91,0.05), rgba(216,253,252,0.1));
+}
+
+.featured-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(114,188,91,1);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.involvement-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  background: linear-gradient(135deg, rgba(114,188,91,0.1), rgba(216,253,252,0.2));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.involvement-icon img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+.involvement-card h3 {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--black);
+}
+
+.involvement-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--black);
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+}
+
+.involvement-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  text-align: left;
+}
+
+.involvement-list li {
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  position: relative;
+  font-size: 0.95rem;
+  color: var(--black);
+  opacity: 0.8;
+}
+
+.involvement-list li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: rgba(114,188,91,1);
+  font-weight: bold;
+}
+
+.btn-involvement {
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  background: rgba(114,188,91,1);
+  color: white;
+  font-family: 'Akzidenz-Grotesk', Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.btn-involvement:hover {
+  background: rgba(114,188,91,0.85);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(114,188,91,0.3);
+}
+
+/* Form Rows */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.form-group select {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 2px solid rgba(0,0,0,0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  transition: border-color 0.3s ease;
+}
+
+.form-group select:focus {
+  outline: none;
+  border-color: rgba(114,188,91,1);
+}
+
+/* Social Share Section */
+.share-content {
+  text-align: center;
+}
+
+.social-share-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.share-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background: white;
+  color: var(--black);
+  border: 2px solid rgba(0,0,0,0.1);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.share-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+.share-btn.facebook:hover {
+  background: #1877f2;
+  color: white;
+  border-color: #1877f2;
+}
+
+.share-btn.twitter:hover {
+  background: #1da1f2;
+  color: white;
+  border-color: #1da1f2;
+}
+
+.share-btn.linkedin:hover {
+  background: #0077b5;
+  color: white;
+  border-color: #0077b5;
+}
+
+/* ===================================================
+   DONATE PAGE STYLES - ECOLIGHT INSPIRED
+   =================================================== */
+
+/* Payment Selection Section */
+.payment-selection-section {
+  background: white;
+}
+
+.payment-methods-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.payment-method-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  position: relative;
+  border: 3px solid transparent;
+}
+
+.payment-method-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(114,188,91,0.25);
+  border-color: rgba(114,188,91,0.3);
+}
+
+.payment-method-card.featured {
+  border-color: rgba(114,188,91,1);
+  background: linear-gradient(135deg, rgba(114,188,91,0.05), rgba(216,253,252,0.1));
+}
+
+.featured-label {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(114,188,91,1);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.payment-method-icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 1.5rem;
+  background: linear-gradient(135deg, rgba(114,188,91,0.1), rgba(216,253,252,0.2));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.payment-method-icon img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.payment-method-card h3 {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: var(--black);
+}
+
+.payment-method-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--black);
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+}
+
+.payment-badge {
+  display: inline-block;
+  background: rgba(114,188,91,0.1);
+  color: rgba(114,188,91,1);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.payment-btn {
+  padding: 1rem 2.5rem;
+  background: white;
+  color: rgba(114,188,91,1);
+  border: 2px solid rgba(114,188,91,1);
+  border-radius: 8px;
+  font-family: 'Akzidenz-Grotesk', Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.payment-btn:hover {
+  background: rgba(114,188,91,1);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.payment-btn.btn-primary {
+  background: rgba(114,188,91,1);
+  color: white;
+}
+
+.payment-btn.btn-primary:hover {
+  background: rgba(114,188,91,0.85);
+}
+
+/* Impact Showcase */
+.impact-showcase {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.impact-item {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.impact-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(114,188,91,0.2);
+}
+
+.impact-item.featured {
+  border: 3px solid rgba(114,188,91,1);
+}
+
+.impact-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #e0e0e0 25%, #f5f5f5 25%);
+  background-size: 40px 40px;
+}
+
+.impact-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.impact-details {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.impact-amount {
+  display: inline-block;
+  background: rgba(114,188,91,1);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.impact-details h3 {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+  color: var(--black);
+}
+
+.impact-details p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--black);
+  opacity: 0.8;
+}
+
+/* Why Donate Grid */
+.why-donate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.why-donate-card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.why-donate-card:hover {
+  transform: translateY(-5px);
+}
+
+.why-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.why-donate-card h3 {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--black);
+}
+
+.why-donate-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--black);
+  opacity: 0.8;
+}
+
+/* ===================================================
+   PAYMENT MODALS
+   =================================================== */
+
+.payment-modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  backdrop-filter: blur(5px);
+  overflow-y: auto;
+}
+
+.payment-modal.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.modal-content {
+  background: white;
+  padding: 3rem;
+  border-radius: 16px;
+  max-width: 700px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.close-modal {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--black);
+  cursor: pointer;
+  transition: color 0.3s ease;
+  line-height: 1;
+}
+
+.close-modal:hover {
+  color: rgba(114,188,91,1);
+}
+
+.modal-content h2 {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--black);
+  text-align: center;
+}
+
+.modal-description {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--black);
+  opacity: 0.8;
+  margin-bottom: 2rem;
+}
+
+/* Provider Options */
+.provider-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.provider-card {
+  background: linear-gradient(135deg, rgba(114,188,91,0.05), rgba(216,253,252,0.1));
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  border: 2px solid rgba(114,188,91,0.2);
+  transition: all 0.3s ease;
+}
+
+.provider-card:hover {
+  border-color: rgba(114,188,91,1);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(114,188,91,0.2);
+}
+
+.provider-logo {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1rem;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.provider-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.provider-card h3 {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: var(--black);
+}
+
+.provider-card p {
+  font-size: 0.9rem;
+  color: var(--black);
+  opacity: 0.7;
+  margin-bottom: 0.75rem;
+}
+
+.payment-number {
+  display: inline-block;
+  background: rgba(114,188,91,1);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+  letter-spacing: 1px;
+}
+
+.provider-instructions {
+  font-size: 0.85rem;
+  color: var(--black);
+  opacity: 0.7;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+/* PayPal Options */
+.paypal-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.paypal-option-btn {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: white;
+  border: 2px solid rgba(0,0,0,0.1);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.paypal-option-btn:hover {
+  border-color: rgba(114,188,91,1);
+  background: rgba(114,188,91,0.05);
+  transform: translateX(5px);
+}
+
+.option-icon {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, rgba(114,188,91,0.1), rgba(216,253,252,0.2));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+}
+
+.option-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.option-text h3 {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--black);
+}
+
+.option-text p {
+  font-size: 0.95rem;
+  color: var(--black);
+  opacity: 0.8;
+  margin: 0.25rem 0;
+}
+
+.option-note {
+  font-size: 0.85rem;
+  color: rgba(114,188,91,1);
+  font-weight: 600;
+}
+
+/* Bank Details Card */
+.bank-details-card {
+  background: linear-gradient(135deg, rgba(114,188,91,0.05), rgba(216,253,252,0.1));
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.bank-details-card h3 {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  color: var(--black);
+  text-align: center;
+}
+
+.bank-info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.bank-info-row:last-child {
+  border-bottom: none;
+}
+
+.info-label {
+  font-weight: 600;
+  color: var(--black);
+}
+
+.info-value {
+  color: var(--black);
+  opacity: 0.8;
+  text-align: right;
+}
+
+/* Modal Footer Instructions */
+.modal-footer-instructions {
+  background: rgba(114,188,91,0.05);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.modal-footer-instructions p {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.modal-footer-instructions ol {
+  margin: 1rem 0 0 1.5rem;
+  line-height: 1.8;
+}
+
+.modal-footer-instructions a {
+  color: rgba(114,188,91,1);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.modal-footer-instructions a:hover {
+  text-decoration: underline;
+}
+
+.security-note {
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--black);
+  opacity: 0.8;
+}
+
+.note {
+  font-size: 0.9rem;
+  color: var(--black);
+  opacity: 0.7;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+/* ===================================================
+    FOUNDER CONTACT ICONS & SCROLL HEIGHTS (legacy)
+   =================================================== */
+
+.founder-contact-overlay {
+  position: absolute;
+  bottom: 4.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.75rem;
+  z-index: 25;
+}
+
+.contact-icon-overlay {
+  width: 45px;
+  height: 45px;
+  background: #eaeaea;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.contact-icon-overlay:hover {
+  background: rgba(114,188,91,0.95);
+  transform: scale(1.15);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+}
+
+.contact-icon-overlay img {
+  width: 22px !important;
+  height: 22px !important;
+  object-fit: contain;
+  display: block;
+  opacity: 1 !important;
+}
+
+/* UPDATED: Scroll Heights - Fixed for better visibility */
+.about-tabs-height {
+  height: 2400vh;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .about-tabs-height {
+    height: 2200vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-tabs-height {
+    height: 2000vh;
+  }
+  
+  .founder-contact-overlay {
+    bottom: 4rem;
+  }
+  
+  .contact-icon-overlay {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .contact-icon-overlay img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* ===================================================
+   RESPONSIVE - NEW PAGES
+   =================================================== */
+
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .event-card {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .event-date {
+    min-height: auto;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-large {
+    width: 100%;
+    text-align: center;
+  }
+
+  .involvement-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .social-share-buttons {
+    flex-direction: column;
+  }
+
+  .payment-methods-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .impact-showcase {
+    grid-template-columns: 1fr;
+  }
+
+  .provider-options {
+    grid-template-columns: 1fr;
+  }
+
+  .paypal-option-btn {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .modal-content {
+    padding: 2rem 1.5rem;
+    margin: 1rem;
+  }
+}
+
+/* ===================================================
+   RESPONSIVE - SCROLL HERO SECTION
+   =================================================== */
+
+@media (max-width: 1024px) {
+  .about-tabs-component {
+    grid-template-columns: 1fr;
+    height: auto;
+    max-height: none;
+  }
+
+  .about-tabs-left {
+    min-height: 50vh;
+  }
+
+  .about-tabs-right {
+    min-height: 40vh;
+  }
+
+  .about-tabs-height {
+    height: 1400vh;
+  }
+
+  .about-tabs-sticky {
+    padding: 2rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-intro {
+    height: 50vh;
+    min-height: 300px;
+  }
+
+  .about-intro-title {
+    font-size: 2rem;
+  }
+
+  .about-intro-subtitle {
+    font-size: 1rem;
+  }
+
+  .about-tab-heading {
+    font-size: 1.6rem;
+  }
+
+  .about-tab-text {
+    font-size: 0.95rem;
+  }
+
+  /* Stack text above visual instead of hiding */
+  .about-tabs-component {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    max-height: none;
+  }
+
+  .about-tabs-left {
+    padding: 1.5rem;
+    min-height: auto;
+  }
+
+  .about-tabs-right {
+    display: block;
+    position: relative;
+    min-height: 45vh;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .about-tab-visual {
+    position: relative;
+    height: 45vh;
+  }
+
+  .about-tab-visual img {
+    object-fit: cover;
+  }
+
+  .about-tabs-container {
+    padding: 0 1rem;
+  }
+
+  .about-tabs-height {
+    height: 1200vh;
+  }
+
+  .about-tabs-component {
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  }
+}
+
+/* ===================================================
+   RESPONSIVE - CONTACT & FOOTER
+   =================================================== */
+
+@media (max-width: 768px) {
+  .contact-buttons-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .contact-button-card {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .contact-icon-wrapper {
+    width: 70px;
+    height: 70px;
+  }
+
+  .contact-icon-img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-brand {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .brand-text {
+    align-items: center;
+  }
+
+  .footer-links,
+  .footer-contact,
+  .footer-social {
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .site-footer {
+    padding: 3rem 1.5rem 1rem;
+  }
+}
+
+/* RESPONSIVE STYLES */
+@media (max-width: 768px) {
+  .page-title { font-size: 2.5rem; }
+  .page-subtitle { font-size: 1.1rem; }
+  .section-heading { font-size: 2rem; }
+  .programs-grid,
+  .plans-container,
+  .contact-info-block,
+  .impact-grid,
+  .mission-founders-grid { grid-template-columns: 1fr; }
+  .founders-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .plan-block,
+  .program-card,
+  .contact-card,
+  .impact-card { padding: 1.5rem; }
+  .content-section { padding: 3rem 1.5rem; }
+  .page-hero { height: 35vh; margin-top: 0; }
+  .btn-donate-large { font-size: 1.2rem; padding: 1rem 2.5rem; }
+  .placeholder-box { height: 250px; font-size: 1.2rem; }
+  .placeholder-box.small { width: 200px; height: 200px; }
+  .gallery-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .image-gallery-section { padding: 3rem 1.5rem; }
+  .overlay-title { font-size: 1.5rem; }
+}
+
+@media (max-width: 1024px) {
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+}
+
+.linkedin { width: 20px; height: 20px; }
+.gmail { width: 20px; height: 20px; }
+/* === FORCE DESKTOP LAYOUT ON MOBILE (OVERRIDE) === */
+@media (max-width: 1024px), (max-width: 768px) {
+  html, body {
+    width: 1280px;
+    min-width: 1280px;
+    overflow-x: auto; /* allow horizontal scroll if needed */
+  }
+
+  /* Restore desktop grid for the scroll component */
+  .about-tabs-component {
+    display: grid !important;
+    grid-template-columns: 0.45fr 1fr !important;
+    height: 70vh !important;
+    max-height: 600px !important;
+  }
+  .about-tabs-right {
+    display: block !important;
+    position: relative !important;
+    min-height: 100% !important;
+    height: 100% !important;
+    overflow: hidden !important;
+  }
+  .about-tab-visual {
+    position: absolute !important;
+    height: 100% !important;
+  }
+  .about-tabs-left {
+    min-height: auto !important;
+  }
+
+  /* Keep the full scroll runway */
+  .about-tabs-height {
+    height: 2400vh !important;
+  }
+}
+/* === Programs carousel (animated split panel) === */
+.program-carousel {
+  position: relative;
+  overflow: hidden;
+  background: rgba(255,255,255,0.9);
+  border-radius: 16px;
+  box-shadow: 0 14px 40px rgba(0,0,0,0.08);
+  min-height: 360px;
+  padding: 2.5rem 2rem;
+}
+
+.program-carousel .tear-line {
+  position: absolute;
+  top: 1.5rem;
+  bottom: 1.5rem;
+  left: 50%;
+  width: 8px;
+  background:
+    linear-gradient(#e5e5e5 0, #e5e5e5 100%),
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0 8px,
+      rgba(0,0,0,0.08) 8px 16px
+    );
+  transform: translateX(-50%);
+  z-index: 1;
+  border-radius: 4px;
+}
+
+.program-slide {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(20px);
+  transition: opacity 0.5s ease, transform 0.6s ease;
+  padding: 1rem 0;
+}
+
+.program-slide.is-active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+
+.program-slide.is-exiting-left .program-text,
+.program-slide.is-exiting-left .program-visual {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.program-slide.is-exiting-right .program-text,
+.program-slide.is-exiting-right .program-visual {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.program-text {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  gap: 0.75rem;
+  text-align: left;
+  padding-right: 1.25rem;
+  transform: translateX(-16px);
+  transition: opacity 0.5s ease, transform 0.6s ease;
+}
+
+.program-text h3 {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1.6rem;
+  margin: 0;
+  color: var(--black);
+}
+
+.program-text p {
+  margin: 0;
+  color: var(--black);
+  line-height: 1.6;
+  opacity: 0.88;
+}
+
+.program-icon-wrap {
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(114,188,91,0.14), rgba(216,253,252,0.25));
+  display: grid;
+  place-items: center;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+}
+
+.program-icon {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.program-visual {
+  position: relative;
+  z-index: 2;
+  justify-self: center;
+  width: 100%;
+  max-width: 520px;
+  aspect-ratio: 16 / 9;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 18px 45px rgba(0,0,0,0.18);
+  transform: translateX(16px);
+  transition: opacity 0.5s ease, transform 0.6s ease;
+}
+
+.program-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .program-slide {
+    grid-template-columns: 1fr;
+  }
+  .program-carousel .tear-line {
+    left: 50%;
+    height: 8px;
+    width: calc(100% - 2rem);
+    top: 50%;
+    bottom: auto;
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+  .program-text {
+    padding-right: 0;
+    text-align: center;
+    transform: translateY(-10px);
+  }
+  .program-visual {
+    transform: translateY(10px);
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,458 @@
+/* -------------------------------------------------
+   ROOT VARIABLES
+   ------------------------------------------------- */
+:root {
+  --brown-dark: #d38253;
+  --brown: #81390c;
+  --white: #ffffff;
+  --black: #000000;
+  --donate: #964936;           /* orange for the DONATE button */
+  --donate-hover: #e65c00;
+  --text-left-gap: 200px;   /* distance from the *screen’s left edge* to the start of the text block */
+  --centre-gap:    10px;    /* distance from the *invisible centre line* to the text block */
+}
+
+/* -------------------------------------------------
+   GLOBAL RESET & BASIC STYLES
+   ------------------------------------------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* -------------------------------------------------
+   HEADER / NAVIGATION (white background, black text)
+   ------------------------------------------------- */
+.site-header {
+  background: var(--white);          /* white navbar */
+  color: var(--black);               /* black text */
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* LOGO + TEXT ------------------------------------------------- */
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;            /* remove underline */
+}
+.logo-img {
+  height: 80px;
+  margin-right: 12px;
+}
+.logo-text,
+.logo-text span {
+  text-decoration: none;
+  color: var(--black);
+}
+.logo-text {
+  font-weight: normal;               /* changed from bold */
+  font-size: 1.4rem;                 /* smaller than before */
+  font-family: 'ITC Benguiat', serif;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 4px;
+}
+
+/* MOTTO ------------------------------------------------- */
+.motto {
+  font-size: 14px;
+  color: var(--black);
+  font-family: 'akzidenz-Grotesk', Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  display: block;
+  margin-top: -5px;
+  text-align: center;
+  font-style: italic;
+  letter-spacing: 8px;
+}
+
+/* MENU TOGGLE (mobile) ------------------------------------------------- */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--black);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* -------------------------------------------------
+   NAV LINKS – new behaviour
+   ------------------------------------------------- */
+.main-nav {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Base style for all nav links (idle) – no rectangle */
+.main-nav a {
+  color: var(--black);
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  background: transparent;               /* NO rectangle while idle */
+  border: 1px solid transparent;         /* keep box size for transition */
+  transition: all .3s ease;
+}
+
+/* Hover style for normal links (exclude the Donate button) */
+.main-nav a:not(.donate):hover {
+  background: rgba(0,0,0,0.1);           /* light‑grey rectangle on hover */
+  border: 1px solid rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* DONATE button – stays orange at all times */
+.main-nav a.donate {
+  background: var(--donate);
+  color: var(--white);
+  font-weight: bold;
+  border: none;
+}
+.main-nav a.donate:hover {
+  background: var(--donate-hover);
+}
+
+/* -------------------------------------------------
+   SEARCH ICON (pulse, grow, no colour inversion)
+   ------------------------------------------------- */
+.search-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+.search-icon {
+  width: 34px;
+  height: 34px;
+  transition: transform .3s ease;
+}
+.search-toggle:hover .search-icon {
+  animation: pulse 1s infinite;
+  transform: scale(1.1);
+}
+@keyframes pulse {
+  0%   {transform:scale(1);}
+  50%  {transform:scale(1.12);}
+  100% {transform:scale(1);}
+}
+
+/* -------------------------------------------------
+   LEFT‑COLUMN (video) – unchanged for non‑home pages
+   ------------------------------------------------- */
+.left {
+  width: 350px;
+  background: transparent;
+  position: fixed;
+  height: 100vh;
+  top: 0; left: 0;
+  overflow: hidden;
+  z-index: 999;
+}
+.left-fixed {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.left-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* -------------------------------------------------
+   RIGHT‑COLUMN – generic content area (gradient background)
+   ------------------------------------------------- */
+.right {
+  width: calc(100% - 350px);
+  background: radial-gradient(circle at 0% 0%,
+            rgba(254,255,255,0.445),
+            #d8fdfc,
+            rgba(114,188,91,0.815));
+  padding: 3rem 2rem 2rem 4rem;
+  margin-left: 350px;
+  overflow-y: auto;
+}
+
+/* HERO SECTION – generic centre alignment (overridden for home) */
+.hero .right {
+  display: flex;
+  flex-direction: column;          /* default – other pages */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: calc(100vh - 120px);
+}
+
+/* -------------------------------------------------
+   BUTTON SPACING (all pages) – consistent gap
+   ------------------------------------------------- */
+.cta {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+/* -------------------------------------------------
+   HOME‑PAGE ONLY – LAYOUT OVERRIDES
+   ------------------------------------------------- */
+
+/* hide the left‑hand video column on the home page */
+body.home .left {display:none;}
+
+/* -----------------------------------------------------------------
+   1️⃣  NEW: equal‑width columns and 10 px gutters
+   ----------------------------------------------------------------- */
+body.home .right {
+  width: 100%;
+  margin-left: 0;
+  /* left padding = 10 px from the very edge of the screen */
+  padding: 3rem 2rem 0 10px;
+  position: relative;
+}
+
+/* turn the hero‑right container into a two‑column flexbox */
+body.home .hero .right {
+  flex-direction: row;               /* left | right columns */
+  align-items: stretch;              /* make columns the same height */
+  text-align: left;                  /* override the default centre alignment */
+}
+
+/* LEFT COLUMN – text (now 50 % width, 10 px from left edge & centre) */
+.home-left {
+  flex: 0 0 50%;                 /* keep the column exactly half the viewport width */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;       /* vertical centring (unchanged) */
+  padding-left: var(--text-left-gap);   /* distance from the left edge of the browser */
+  padding-right: var(--centre-gap);     /* distance from the centre line */
+  text-align: left;              /* keep text left‑aligned */
+}
+
+/* RIGHT COLUMN – logo (also 50 % width, 10 px from centre line) */
+.home-right {
+  flex: 0 0 50%;                     /* equal half‑width */
+  display: flex;
+  align-items: flex-end;             /* keep logo at the bottom of the column */
+  justify-content: flex-start;       /* left‑align the image inside its column */
+  padding-left: 10px;                /* 10 px away from the centre line */
+}
+
+/* remove the old margin that forced the text away from the right edge */
+body.home .hero-text {margin:0;}
+
+/* --------------------------- TYPOGRAPHY --------------------------- */
+.welcome {
+  font-family: 'Akzidenz-Grotesk';
+  font-size: 30px;
+  font-style: italic;
+  text-transform: uppercase;
+  margin: 0;
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: slideLeft .8s ease-out forwards;
+  animation-delay: 0.2s;
+  font-weight: lighter;
+  letter-spacing: 0.4rem;
+}
+.title {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 39px;
+  margin: 0;
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: slideLeft .8s ease-out forwards;
+  animation-delay: 0.7s;
+}
+.subtitle {
+  font-family: 'Corben', cursive;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: slideLeft .8s ease-out forwards;
+  animation-delay: 1.2s;
+}
+
+/* slide‑left for the three text lines (unchanged) */
+@keyframes slideLeft {
+  from {opacity:0; transform:translateX(-30px);}
+  to   {opacity:1; transform:translateX(0);}
+}
+
+/* --------------------------- LOGO ANIMATION --------------------------- */
+.home-logo {
+  width: 100%;
+  max-width: 350px;                  /* never exceed this */
+  opacity: 0;
+  transform: translateY(100%);       /* start below the column */
+  animation: logoSlideUp .8s ease-out forwards;
+  animation-delay: 1.7s;            /* after the last text line */
+}
+@keyframes logoSlideUp {
+  to {opacity:1; transform:translateY(0);}
+}
+
+/* -------------------------------------------------
+   FOOTER – ONLY ON HOME
+   ------------------------------------------------- */
+.home-footer {
+  background: var(--white);
+  color: var(--black);
+  text-align: center;
+  height: 20px;
+  line-height: 0.5;
+  flex-shrink: 0;
+}
+.footer-text {
+  text-align: center;
+  font-family: 'Akzidenz-Grotesk';
+  font-size: large;
+  padding: 1rem 0;
+  margin: 0;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  border-top: 2px solid rgba(0,0,0,0.1);
+  padding-top: 1.5rem;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 0.95rem;
+  color: var(--black);
+  opacity: 0.8;
+  margin: 0;
+}
+
+/* -------------------------------------------------
+   SEARCH OVERLAY (modal) – semi‑transparent background
+   ------------------------------------------------- */
+.search-overlay {
+  position: fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(5px);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:2000;
+}
+.search-overlay.hidden {display:none;}
+.search-modal {
+  background:rgba(255,255,255,0.85);
+  padding:2rem;
+  border-radius:12px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.3);
+  width:90%; max-width:500px;
+  display:flex;
+  align-items:center;
+}
+.search-modal input[type="text"] {
+  flex:1;
+  padding:.5rem;
+  font-size:1rem;
+  border:1px solid #ccc;
+  border-radius:4px;
+}
+.search-modal button {margin-left:.5rem; padding:.5rem 1rem;}
+
+/* -------------------------------------------------
+   SEARCH PAGE (same as home – no video)
+   ------------------------------------------------- */
+body.search-page .left {display:none;}
+body.search-page .right {
+  width:100%;
+  margin-left:0;
+  padding:3rem 2rem;
+}
+body.search-page .section {flex-direction:column; padding-top:70px;}
+
+/* -------------------------------------------------
+   MOBILE RESPONSIVE
+   ------------------------------------------------- */
+@media (max-width:768px) {
+  .menu-toggle {display:block;}
+
+  .main-nav {
+    display:none;
+    flex-direction:column;
+    position:absolute;
+    top:60px;
+    right:0;
+    background:var(--brown-dark);
+    width:100%;
+    padding:1rem;
+  }
+  .main-nav a {margin:0.5rem 0;}
+  .main-nav.active {display:flex;}
+
+  .section {flex-direction:column; padding-top:100px;}
+  .left {position:relative; width:100%; height:300px;}
+  .right {width:100%; margin-left:0; padding:2rem;}
+  .left-fixed {flex-direction:row; justify-content:center;}
+  .left-video {width:100%; height:100%; object-fit:cover;}
+
+  /* Home‑page mobile tweaks */
+  body.home .hero .right {flex-direction:column; align-items:center;}
+  .home-left,
+  .home-right {flex:none; width:100%; padding:0;}
+  .home-left {padding-bottom:1rem;}
+  .home-logo {width:180px; max-width:100%;}
+  body.home .right {padding:3rem 2rem 0 2rem;}
+}
+
+/* -------------------------------------------------
+   GLOBAL LOADING OVERLAY (appears on any navigation)
+   ------------------------------------------------- */
+#loader {
+  position: fixed;
+  inset: 0;
+  background: rgba(255,255,255,0.40);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease;
+}
+#loader.visible {
+  opacity: 1;
+  pointer-events: all;
+}
+#loader img {
+  max-width: 180px;
+  width: 100%;
+  animation: pulse 1.4s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%   { transform: scale(0.90); }
+  50%  { transform: scale(1.10); }
+  100% { transform: scale(0.90); }
+}

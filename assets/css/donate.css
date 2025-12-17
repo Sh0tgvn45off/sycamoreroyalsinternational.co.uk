@@ -1,0 +1,260 @@
+/* -------------------------------------------------
+   DONATE PAGE – PAGE‑SPECIFIC STYLES
+   ------------------------------------------------- */
+
+/* -----------------------------------------------------------------
+   1️⃣ HERO (gradient – same as the rest of the site)
+   ----------------------------------------------------------------- */
+.page-hero {
+  height: 40vh;
+  min-height: 300px;
+  background: radial-gradient(circle at 0% 0%,
+            rgba(254,255,255,0.445),
+            #d8fdfc,
+            rgba(114,188,91,0.815));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* -----------------------------------------------------------------
+   2️⃣ SECTION WRAPPERS – use the same vertical rhythm as .content-section
+   ----------------------------------------------------------------- */
+.content-section {
+  padding: 3rem 2rem;
+}
+.content-section.alt-bg {
+  background: radial-gradient(circle at 50% 0%,
+            rgba(254,255,255,0.445),
+            #d8fdfc,
+            rgba(114,188,91,0.815));
+}
+
+/* -----------------------------------------------------------------
+   3️⃣ HEADINGS & LEAD TEXT
+   ----------------------------------------------------------------- */
+.section-heading {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 2.2rem;
+  color: var(--black);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.lead-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--black);
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+/* -----------------------------------------------------------------
+   4️⃣ IMPACT GRID – scroll‑in animation (fade & scale)
+   ----------------------------------------------------------------- */
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+.impact-card {
+  background: rgba(255,255,255,0.9);
+  border-radius: .75rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,.06);
+  text-align: center;
+  overflow: hidden;
+  transform: translateY(30px) scale(.95);
+  opacity: 0;
+  transition: transform .6s ease, opacity .6s ease;
+}
+.impact-card.visible {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+.impact-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0,0,0,.12);
+}
+.impact-visual {
+  width: 100%;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: .75rem;
+}
+.impact-amount {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--donate);
+}
+.impact-card h3 {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1.4rem;
+  margin: .5rem 0;
+  color: var(--black);
+}
+
+/* -----------------------------------------------------------------
+   5️⃣ PAYMENT METHOD SELECTION – same card style as the contact‑cards
+   ----------------------------------------------------------------- */
+.payment-methods {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  max-width: 1000px;
+  margin: 2rem auto;
+}
+.payment-method-card {
+  background: var(--white);
+  border-radius: .75rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,.07);
+  padding: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.payment-method-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,.12);
+}
+.payment-method-card .icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto .75rem;
+  background: linear-gradient(135deg,
+            rgba(114,188,91,.15),
+            rgba(216,253,252,.2));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.payment-method-card .icon img { width: 34px; height: 34px; }
+.payment-method-card .badge {
+  display: inline-block;
+  margin-top: .5rem;
+  font-size: .75rem;
+  color: var(--white);
+  background: rgba(0,0,0,.3);
+  padding: .25rem .6rem;
+  border-radius: .5rem;
+}
+.payment-method-card.featured {
+  border: 2px solid var(--donate);
+}
+.payment-method-card.featured::before {
+  content: "Most Popular";
+  position: absolute;
+  top: .75rem; left: .75rem;
+  background: var(--donate);
+  color: var(--white);
+  font-size: .75rem;
+  padding: .3rem .6rem;
+  border-radius: .5rem;
+}
+
+/* -----------------------------------------------------------------
+   6️⃣ BIG “DONATE” BUTTON
+   ----------------------------------------------------------------- */
+.btn-donate-large {
+  display: inline-block;
+  background: var(--donate);
+  color: var(--white);
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: .9rem 2rem;
+  border-radius: .5rem;
+  text-decoration: none;
+  transition: background .25s ease, transform .2s;
+}
+.btn-donate-large:hover {
+  background: var(--donate-hover);
+  transform: translateY(-2px);
+}
+
+/* -----------------------------------------------------------------
+   7️⃣ MODALS (same as the earlier donate.js expects)
+   ----------------------------------------------------------------- */
+.payment-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.5);
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.payment-modal .modal-content {
+  background: var(--white);
+  border-radius: .75rem;
+  max-width: 600px;
+  width: 90%;
+  padding: 1.5rem 2rem;
+  position: relative;
+  box-shadow: 0 8px 30px rgba(0,0,0,.2);
+}
+.payment-modal .close-modal {
+  position: absolute;
+  top: .75rem; right: .75rem;
+  font-size: 1.4rem;
+  color: var(--black);
+  cursor: pointer;
+}
+.provider-card {
+  background: rgba(255,255,255,.95);
+  border: 1px solid rgba(0,0,0,.07);
+  border-radius: .75rem;
+  padding: 1rem;
+  text-align: center;
+  margin: 1rem 0;
+}
+.provider-card img { width: 50px; height: 50px; margin-bottom: .5rem; }
+.provider-card .payment-number { font-weight: 600; color: var(--donate); }
+.paypal-option-btn {
+  display: flex;
+  align-items: center;
+  padding: .75rem 1rem;
+  background: rgba(255,255,255,.95);
+  border: 1px solid rgba(0,0,0,.07);
+  border-radius: .75rem;
+  cursor: pointer;
+  transition: background .3s ease;
+  margin-bottom: .5rem;
+}
+.paypal-option-btn:hover { background: rgba(0,0,0,.03); }
+.paypal-option-btn .icon img { width: 34px; height: 34px; margin-right: .75rem; }
+.security-note {
+  font-size: .9rem;
+  color: var(--black);
+  opacity: .85;
+  margin-top: 1rem;
+}
+
+/* -----------------------------------------------------------------
+   8️⃣ RESPONSIVE (mobile)
+   ----------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .page-hero { height: 30vh; }
+  .content-section { padding: 2rem 1rem; }
+  .payment-methods,
+  .impact-grid { grid-template-columns: 1fr; }
+}
+
+/* -----------------------------------------------------------------
+   9️⃣ PLACEHOLDER IMAGE (used if you don’t have real pictures yet)
+   ----------------------------------------------------------------- */
+.placeholder-image {
+  background-color: #e0e0e0;
+  background-size: 40px 40px;
+  background-image: linear-gradient(45deg,
+    rgba(255,255,255,.3) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255,255,255,.3) 50%,
+    rgba(255,255,255,.3) 75%,
+    transparent 75%,
+    transparent);
+}

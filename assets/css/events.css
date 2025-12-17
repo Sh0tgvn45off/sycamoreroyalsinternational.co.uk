@@ -1,0 +1,229 @@
+/* Events page specific overrides */
+
+.programs-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.programs-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.programs-bg-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(2px);
+  opacity: 0.35;
+}
+
+/* carousel container */
+.program-carousel {
+  position: relative;
+  overflow: hidden;
+  background: rgba(255,255,255,0.92);
+  border-radius: 16px;
+  box-shadow: 0 14px 40px rgba(0,0,0,0.08);
+  min-height: 360px;
+  padding: 2.75rem 2rem;
+  z-index: 1;
+}
+
+.tear-line {
+  position: absolute;
+  top: 1.5rem;
+  bottom: 1.5rem;
+  left: 50%;
+  width: 8px;
+  background:
+    linear-gradient(#e5e5e5 0, #e5e5e5 100%),
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0 8px,
+      rgba(0,0,0,0.08) 8px 16px
+    );
+  transform: translateX(-50%);
+  z-index: 2;
+  border-radius: 4px;
+}
+
+.carousel-pause {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  border: none;
+  background: rgba(255,255,255,0.9);
+  color: var(--black);
+  font-size: 1rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+  cursor: pointer;
+}
+
+.program-slide {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(20px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+  padding: 1rem 0;
+}
+
+.program-slide.is-active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+
+.program-text {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 0.75rem;
+  text-align: center;
+  padding-right: 0;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.program-text h3 {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1.6rem;
+  margin: 0;
+  color: var(--black);
+}
+
+.program-text p {
+  margin: 0;
+  color: var(--black);
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.program-visual {
+  position: relative;
+  z-index: 1;
+  justify-self: center;
+  width: 100%;
+  max-width: 520px;
+  aspect-ratio: 16 / 9;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 18px 45px rgba(0,0,0,0.18);
+}
+
+.program-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Future Plans table */
+.plans-table {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  align-items: start;
+  margin-top: 1.5rem;
+}
+
+.plan-column {
+  position: relative;
+  background: rgba(255,255,255,0.92);
+  border-radius: 14px;
+  padding: 1.75rem 1.5rem 2.75rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.04);
+}
+
+.plan-column h3 {
+  text-align: center;
+  margin: 0 0 1rem;
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1.4rem;
+  color: var(--black);
+}
+
+.plan-list-table {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.plan-list-table li {
+  position: relative;
+  padding-left: 1.4rem;
+  color: var(--black);
+  line-height: 1.5;
+}
+
+.plan-list-table li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--brown, #8b5a2b);
+  font-weight: bold;
+}
+
+.plan-icon {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(114,188,91,0.18), rgba(216,253,252,0.28));
+  display: grid;
+  place-items: center;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+.plan-icon img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .program-slide {
+    grid-template-columns: 1fr;
+  }
+  .tear-line {
+    left: 50%;
+    height: 8px;
+    width: calc(100% - 2rem);
+    top: 50%;
+    bottom: auto;
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+  .carousel-pause {
+    top: 50%;
+    left: 50%;
+  }
+  .program-text {
+    padding-right: 0;
+    text-align: center;
+  }
+  .program-visual {
+    max-width: 100%;
+  }
+}

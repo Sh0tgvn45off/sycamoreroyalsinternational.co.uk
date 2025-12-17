@@ -1,0 +1,308 @@
+/* Get Involved page specific styling */
+
+.app-lead { text-align: center; }
+
+.app-selector {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1.5rem 0;
+}
+
+.app-option {
+  background: rgba(255,255,255,0.92);
+  padding: 0.75rem 1.25rem;
+  border-radius: 999px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.app-option input {
+  margin-right: 0.5rem;
+}
+
+.app-option:hover {
+  border-color: rgba(114,188,91,0.35);
+}
+
+.app-form-card {
+  margin-top: 1rem;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.04);
+}
+
+.app-form-card .form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.app-form-card .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.app-form-card label {
+  font-weight: 700;
+  color: var(--black);
+}
+
+.app-form-card input,
+.app-form-card textarea,
+.app-form-card select {
+  border: 2px solid rgba(0,0,0,0.08);
+  border-radius: 10px;
+  padding: 0.65rem 0.8rem;
+  font-size: 1rem;
+  background: rgba(255,255,255,0.96);
+}
+
+.app-form-card input:focus,
+.app-form-card textarea:focus,
+.app-form-card select:focus {
+  outline: none;
+  border-color: rgba(114,188,91,0.6);
+  box-shadow: 0 0 0 3px rgba(114,188,91,0.18);
+}
+
+.btn-submit {
+  margin-top: 1rem;
+  padding: 0.9rem 1.5rem;
+  background: rgba(114,188,91,1);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(114,188,91,0.25);
+}
+
+.btn-submit:hover {
+  background: rgba(114,188,91,0.9);
+}
+
+.form-note {
+  margin-top: 0.75rem;
+  color: rgba(0,0,0,0.7);
+  font-size: 0.95rem;
+}
+
+.apply-trigger {
+  cursor: pointer;
+}
+
+/* Hide conditional blocks by default (JS toggles display) */
+.conditional {
+  display: none;
+}
+
+/* Contact section refresh (1.5× larger) */
+.contact-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  text-align: center;
+}
+
+.contact-block {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.contact-block h3 {
+  font-size: 1.9rem;
+  margin-bottom: 1.6rem;
+}
+
+.founders-row {
+  display: flex;
+  gap: 4.2rem;                /* more spacing */
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.founder-card-mini {
+  background: #fff;
+  border-radius: 18px;
+  padding: 3.75rem 3.25rem;   /* larger padding */
+  box-shadow: 0 20px 48px rgba(0,0,0,0.12);
+  width: 480px;               /* larger card */
+}
+
+.founder-photo-mini {
+  width: 300px;               /* larger photo */
+  height: 300px;
+  margin: 0 auto 1.3rem;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #f3f3f3;
+}
+.founder-photo-mini img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.founder-name-mini {
+  font-weight: 700;
+  margin-bottom: 1.1rem;
+  color: var(--black);
+  font-size: 1.4rem;          /* larger name text */
+}
+
+.founder-trigger {
+  background: white;
+  border: 2px solid rgba(114,188,91,0.35);
+  color: var(--black);
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1.08rem;
+  border-radius: 999px;
+  padding: 1.2rem 1.6rem;     /* bigger button */
+  cursor: pointer;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.14);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  width: 100%;
+}
+.founder-trigger:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(114,188,91,0.25);
+  border-color: rgba(114,188,91,0.6);
+}
+
+/* Visit block (slightly larger) */
+.visit-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+}
+.visit-icon {
+  width: 24px; height: 24px;
+}
+
+.connect-buttons {
+  display: flex;
+  gap: 1.1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.connect-btn {
+  display: inline-block;
+  padding: 1.05rem 1.9rem;
+  background: white;
+  color: var(--black);
+  border: 2px solid rgba(114,188,91,0.35);
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+  transition: all 0.2s ease;
+}
+.connect-btn:hover {
+  border-color: rgba(114,188,91,0.65);
+  box-shadow: 0 16px 34px rgba(114,188,91,0.25);
+}
+
+/* Founder Modal (keep existing styles; ensure icons are visible) */
+.founder-modal-btn img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+/* Founder Modal */
+.founder-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(6px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.founder-modal.active { display: flex; }
+
+.founder-modal-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  width: min(360px, 90vw);
+  box-shadow: 0 16px 50px rgba(0,0,0,0.28);
+  position: relative;
+  text-align: center;
+}
+
+.founder-modal-close {
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
+  background: transparent;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: var(--black);
+  line-height: 1;
+}
+
+.founder-modal-title {
+  margin: 0 0 1.5rem 0;
+  font-family: 'ITC Benguiat', serif;
+  font-size: 1.4rem;
+  color: var(--black);
+}
+
+.founder-modal-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.founder-modal-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(114,188,91,0.2), rgba(216,253,252,0.35));
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.founder-modal-btn img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+.founder-modal-btn:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 10px 24px rgba(114,188,91,0.25);
+  background: var(--brown);
+}
+
+.founder-modal-btn:hover img {
+  filter: invert(1) brightness(1.1);
+}
+
+.founder-modal-hint {
+  font-size: 0.9rem;
+  color: rgba(0,0,0,0.65);
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .app-form-card { padding: 1.5rem; }
+}
