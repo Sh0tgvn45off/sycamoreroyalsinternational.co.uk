@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+ <meta name="viewport" content="width=1280, initial-scale=0.35, maximum-scale=0.35, minimum-scale=0.35, user-scalable=no">
+  <title>Donate – Sycamore Royals International</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body>
+
+  <!-- GLOBAL LOADER -->
+  <div id="loader">
+    <img src="assets/media/loading.png" alt="Loading…" width="180" height="180">
+  </div>
+
+  <!-- HEADER / NAVIGATION -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="nav-logo.png" alt="Sycamore Royals International logo" class="logo-img">
+        <span class="logo-text">
+          SYCAMORE ROYALS<br>
+          <span class="motto">SCALING THE HEIGHTS</span>
+        </span>
+      </a>
+
+      <button id="menu-toggle" class="menu-toggle">&#9776;</button>
+
+      <nav id="main-nav" class="main-nav">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT US</a>
+        <a href="events.html">EVENTS</a>
+        <a href="get-involved.html">GET INVOLVED</a>
+        <a href="donate.html" class="donate">DONATE</a>
+      </nav>
+
+      <button id="search-toggle" class="search-toggle">
+        <img src="search-icon.png" alt="Search site" class="search-icon"/>
+      </button>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="hero-overlay">
+      <h1 class="page-title">Make a Donation</h1>
+      <p class="page-subtitle">Your generosity transforms lives</p>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <div class="page-content">
+
+    <!-- Introduction Section -->
+    <section class="content-section">
+      <div class="section-inner">
+        <div class="intro-content center-text">
+          <h2 class="section-heading">Choose Your Payment Method</h2>
+          <p class="lead-text">
+            Select your preferred way to give. Every donation directly supports children 
+            and families in Angaro Wera, Uganda.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Payment Method Selection -->
+    <section class="content-section payment-selection-section">
+      <div class="section-inner">
+        
+        <div class="payment-methods-grid">
+          
+          <!-- Mobile Money Payment -->
+          <div class="payment-method-card" onclick="openMobileMoneyModal()">
+            <div class="payment-method-icon">
+              <img src="icons/mobile-moneysim-card.png" alt="Mobile Money">
+            </div>
+            <h3>African Mobile Money</h3>
+            <p>Pay using MPESA, MTN Mobile Money, Airtel Money, or other mobile wallets</p>
+            <div class="payment-badge">Within Africa</div>
+            <button class="payment-btn">Select Method</button>
+          </div>
+
+          <!-- PayPal / Card Payment -->
+          <div class="payment-method-card featured" onclick="openPayPalModal()">
+            <div class="featured-label">Most Popular</div>
+            <div class="payment-method-icon">
+              <img src="icons/paypal app pay.png" alt="PayPal">
+            </div>
+            <h3>PayPal / Credit Card</h3>
+            <p>Secure international payments via PayPal or Credit/Debit Card</p>
+            <div class="payment-badge">International</div>
+            <button class="payment-btn btn-primary">Select Method</button>
+          </div>
+
+          <!-- Bank Transfer -->
+          <div class="payment-method-card" onclick="openBankTransferModal()">
+            <div class="payment-method-icon">
+              <img src="icons/bank.png" alt="Bank Transfer">
+            </div>
+            <h3>Direct Bank Transfer</h3>
+            <p>Transfer directly to our bank account for larger donations</p>
+            <div class="payment-badge">All Regions</div>
+            <button class="payment-btn">View Details</button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Donation Impact Section -->
+    <section class="content-section alt-bg">
+      <div class="section-inner">
+        <h2 class="section-heading">Your Impact</h2>
+        
+        <div class="impact-showcase">
+          
+          <div class="impact-item">
+            <div class="impact-image">
+              <img src="assets/media/impact-education.jpg" alt="Education Impact">
+            </div>
+            <div class="impact-details">
+              <div class="impact-amount">$25</div>
+              <h3>School Supplies</h3>
+              <p>Provides books, notebooks, and learning materials for one child for a full semester.</p>
+            </div>
+          </div>
+
+          <div class="impact-item">
+            <div class="impact-image">
+              <img src="assets/media/impact-nutrition.jpg" alt="Nutrition Impact">
+            </div>
+            <div class="impact-details">
+              <div class="impact-amount">$50</div>
+              <h3>Monthly Food Support</h3>
+              <p>Feeds a child nutritious meals for one month, supporting their health and learning.</p>
+            </div>
+          </div>
+
+          <div class="impact-item">
+            <div class="impact-image">
+              <img src="assets/media/impact-healthcare.jpg" alt="Healthcare Impact">
+            </div>
+            <div class="impact-details">
+              <div class="impact-amount">$100</div>
+              <h3>Medical Care</h3>
+              <p>Covers healthcare, immunizations, and check-ups for six months.</p>
+            </div>
+          </div>
+
+          <div class="impact-item featured">
+            <div class="impact-image">
+              <img src="assets/media/impact-sponsorship.jpg" alt="Sponsorship Impact">
+            </div>
+            <div class="impact-details">
+              <div class="impact-amount">$50/mo</div>
+              <h3>Child Sponsorship</h3>
+              <p>Complete support including education, healthcare, mentorship, and spiritual guidance.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Donate Section -->
+    <section class="content-section">
+      <div class="section-inner">
+        <h2 class="section-heading">Why Your Gift Matters</h2>
+        
+        <div class="why-donate-grid">
+          
+          <div class="why-donate-card">
+            <div class="why-icon">💚</div>
+            <h3>100% Direct Impact</h3>
+            <p>Every dollar goes directly to programs. Administrative costs are covered separately.</p>
+          </div>
+
+          <div class="why-donate-card">
+            <div class="why-icon">🔒</div>
+            <h3>Secure & Safe</h3>
+            <p>All transactions are encrypted and secure. Your privacy is our priority.</p>
+          </div>
+
+          <div class="why-donate-card">
+            <div class="why-icon">📧</div>
+            <h3>Tax Deductible</h3>
+            <p>Receive an official receipt for tax purposes via email immediately.</p>
+          </div>
+
+          <div class="why-donate-card">
+            <div class="why-icon">📊</div>
+            <h3>Full Transparency</h3>
+            <p>Regular updates showing exactly how your donation is making a difference.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </div>
+  <!-- END OF PAGE CONTENT -->
+
+  <!-- MOBILE MONEY MODAL -->
+  <div id="mobileMoneyModal" class="payment-modal">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeMobileMoneyModal()">&times;</span>
+      <h2>African Mobile Money Payment</h2>
+      <p class="modal-description">Select your mobile money provider:</p>
+      
+      <div class="provider-options">
+        
+        <!-- MTN Mobile Money -->
+        <div class="provider-card">
+          <div class="provider-logo">
+            <img src="icons/mpesa1.png" alt="MTN Mobile Money">
+          </div>
+          <h3>MPESA</h3>
+          <p>Send payment to:</p>
+          <div class="payment-number">+256 773 584968</div>
+          <p class="provider-instructions">Use "Send Money" and enter the number above</p>
+        </div>
+
+        <!-- Airtel Money -->
+        <div class="provider-card">
+          <div class="provider-logo">
+            <img src="icons/airtel money1.png" alt="Airtel Money">
+          </div>
+          <h3>Airtel Money</h3>
+          <p>Send payment to:</p>
+          <div class="payment-number">+256 773 584968</div>
+          <p class="provider-instructions">Use "Send Money" and enter the number above</p>
+        </div>
+
+      </div>
+
+      <div class="modal-footer-instructions">
+        <p><strong>After sending payment:</strong></p>
+        <ol>
+          <li>You'll receive a confirmation SMS</li>
+          <li>Please email us at <a href="mailto:sycamoreroyal@gmail.com">sycamoreroyal@gmail.com</a> with your transaction ID</li>
+          <li>We'll send you an official receipt within 24 hours</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAYPAL MODAL -->
+  <div id="paypalModal" class="payment-modal">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closePayPalModal()">&times;</span>
+      <h2>PayPal / Card Payment</h2>
+      <p class="modal-description">Choose how you'd like to proceed:</p>
+      
+      <div class="paypal-options">
+        
+        <!-- PayPal Account -->
+        <button class="paypal-option-btn" onclick="proceedWithPayPal()">
+          <div class="option-icon">
+            <img src="icons/paypal.png" alt="PayPal">
+          </div>
+          <div class="option-text">
+            <h3>Pay with PayPal Account</h3>
+            <p>Send payment to: <strong>sycamoreroyal@gmail.com</strong></p>
+            <p class="option-note">Click to open PayPal</p>
+          </div>
+        </button>
+
+        <!-- Credit/Debit Card -->
+        <button class="paypal-option-btn" onclick="proceedWithCard()">
+          <div class="option-icon">
+            <img src="icons/bank-visa.png" alt="Credit Card">
+          </div>
+          <div class="option-text">
+            <h3>Pay with Credit/Debit Card</h3>
+            <p>Process payment through PayPal's secure gateway</p>
+            <p class="option-note">No PayPal account needed</p>
+          </div>
+        </button>
+
+      </div>
+
+      <div class="modal-footer-instructions">
+        <p class="security-note">🔒 All transactions are secure and encrypted. You'll be redirected to PayPal's secure payment page.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- BANK TRANSFER MODAL -->
+  <div id="bankTransferModal" class="payment-modal">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeBankTransferModal()">&times;</span>
+      <h2>Bank Transfer Details</h2>
+      <p class="modal-description">Use the following information for direct bank transfers:</p>
+      
+      <div class="bank-details-card">
+        <h3>Bank Information</h3>
+        <div class="bank-info-row">
+          <span class="info-label">Bank Name:</span>
+          <span class="info-value">__________________</span>
+        </div>
+        <div class="bank-info-row">
+          <span class="info-label">Account Name:</span>
+          <span class="info-value">Sycamore Royals International</span>
+        </div>
+        <div class="bank-info-row">
+          <span class="info-label">Account Number:</span>
+          <span class="info-value">__________________</span>
+        </div>
+        <div class="bank-info-row">
+          <span class="info-label">SWIFT Code:</span>
+          <span class="info-value">__________________</span>
+        </div>
+      </div>
+
+      <div class="modal-footer-instructions">
+        <p><strong>For complete bank details, please contact us:</strong></p>
+        <p>Email: <a href="mailto:sycamoreroyal@gmail.com">sycamoreroyal@gmail.com</a></p>
+        <p>Phone: <a href="tel:+256773584968">+256 773 584968</a></p>
+        <p class="note">Bank transfers are ideal for larger donations ($500+)</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-container">
+    
+    <!-- Brand Section -->
+    <div class="footer-brand">
+      <img src="logo.png" alt="Sycamore Royals International Logo" class="footer-logo">
+      <div class="brand-text">
+        <span class="brand-line-1">SYCAMORE ROYALS</span>
+        <span class="brand-line-2">INTERNATIONAL</span>
+        <span class="brand-motto">Scaling the Heights</span>
+      </div>
+    </div>
+    
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="get-involved.html">Get Involved</a></li>
+        <li><a href="donate.html">Donate</a></li>
+      </ul>
+    </div>
+    
+    <!-- Contact Info -->
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <p>Email: <a href="mailto:sycamoreroyal@gmail.com">sycamoreroyal@gmail.com</a></p>
+      <p>Phone: <a href="tel:+256773584968">+256 773 584968</a></p>
+      <p>Location: Ajesa Cell, Osekai Wera, Amuria Uganda</p>
+    </div>
+    
+    <!-- Social Media -->
+    <div class="footer-social">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/" aria-label="Facebook" target="_blank">
+          <img src="icons/facebook.png" alt="Facebook">
+        </a>
+        <a href="https://www.linkedin.com/" aria-label="LinkedIn" target="_blank">
+          <img src="icons/linkedin.png" alt="LinkedIn">
+        </a>
+        <a href="https://www.instagram.com/" aria-label="Instagram" target="_blank">
+          <img src="icons/instagram.png" alt="Instagram">
+        </a>
+      </div>
+    </div>
+    
+  </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Sycamore Royals International. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- SEARCH OVERLAY -->
+  <div id="search-overlay" class="search-overlay hidden">
+    <div class="search-modal">
+      <input type="text" id="search-input" placeholder="Search…" />
+      <button id="search-go" class="btn primary">Search</button>
+    </div>
+  </div>
+
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/donate.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=1280, initial-scale=0.35, maximum-scale=0.35, minimum-scale=0.35, user-scalable=no">
+  <title>Sycamore Royals International – About Us</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body>
+
+  <!-- GLOBAL LOADER -->
+  <div id="loader">
+    <img src="assets/media/loading.png"
+         alt="Loading…"
+         width="180"
+         height="180">
+  </div>
+
+  <!-- HEADER / NAVIGATION -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="nav-logo.png" alt="Sycamore Royals International logo" class="logo-img">
+        <span class="logo-text">
+          SYCAMORE ROYALS<br>
+          <span class="motto">SCALING THE HEIGHTS</span>
+        </span>
+      </a>
+
+      <button id="menu-toggle" class="menu-toggle">&#9776;</button>
+
+      <nav id="main-nav" class="main-nav">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT US</a>
+        <a href="events.html">EVENTS</a>
+        <a href="get-involved.html">GET INVOLVED</a>
+        <a href="donate.html" class="donate">DONATE</a>
+      </nav>
+
+      <button id="search-toggle" class="search-toggle">
+        <img src="search-icon.png" alt="Search site" class="search-icon"/>
+      </button>
+    </div>
+  </header>
+
+  <!-- SEARCH RESULTS CONTENT -->
+  <section class="section">
+    <div class="right">
+      <h1>Search Results</h1>
+      <div id="results"></div>
+    </div>
+  </section>
+
+  <!-- SEARCH OVERLAY (reuse – hidden) -->
+  <div id="search-overlay" class="search-overlay hidden">
+    <div class="search-modal">
+      <input type="text" id="search-input" placeholder="Search…" />
+      <button id="search-go" class="btn primary">Search</button>
+    </div>
+  </div>
+
+  <!-- INLINE SCRIPT TO DISPLAY RESULTS (kept from original) -->
+  <script>
+    // ----- SIMPLE SEARCH DATA (static) -----
+    const siteIndex = [
+      {title:'Home',url:'index.html',excerpt:'Welcome to Sycamore Royals International – our mission, vision and ways to get involved.'},
+      {title:'About Us',url:'about.html',excerpt:'Learn about SRI’s founding, purpose, and the people behind the organisation.'},
+      {title:'Events',url:'events.html',excerpt:'Discover the programmes we run: child development, healthcare, education, agriculture and more.'},
+      {title:'Get Involved',url:'get-involved.html',excerpt:'Contact information, volunteer opportunities and ways you can support our work.'},
+      {title:'Donate',url:'donate.html',excerpt:'Help us fund our projects – learn how your donation makes a difference.'}
+    ];
+    const params = new URLSearchParams(window.location.search);
+    const query = params.get('q') ? params.get('q').trim() : '';
+    const resultsContainer = document.getElementById('results');
+
+    function renderResults(matches){
+      if (matches.length===0){
+        resultsContainer.innerHTML = `<p>No results found for "<strong>${query}</strong>".</p>`;
+        return;
+      }
+      const html = matches.map(item=>`
+        <div class="search-result">
+          <a href="${item.url}"><h3>${item.title}</h3></a>
+          <p>${item.excerpt}</p>
+        </div>
+      `).join('');
+      resultsContainer.innerHTML = html;
+    }
+
+    if (!query){
+      resultsContainer.innerHTML = '<p>Please enter a search term in the search box.</p>';
+    } else {
+      const lower = query.toLowerCase();
+      const matches = siteIndex.filter(item =>
+        item.title.toLowerCase().includes(lower) ||
+        item.excerpt.toLowerCase().includes(lower)
+      );
+      renderResults(matches);
+    }
+  </script>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

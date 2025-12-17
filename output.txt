@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sycamore Royals International</title>
+  <style>
+    :root {
+      --brown-dark: #d38253;
+      --brown: #81390c;
+      --white: #ffffff;
+      --black: #000;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
+
+    .site-header {
+      background: var(--brown-dark);
+      color: var(--white);
+      padding: 1rem;
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .logo-img {
+      height: 80px;
+      margin-right: 10px;
+    }
+
+    .logo-text {
+      font-weight: bold;
+      font-size: 1.8rem;
+      font-family: 'ITC Benguiat';
+      color: #000;
+      padding: auto;
+      text-align: center;
+      line-height: 1.2;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .international {
+      font-size: 1.2rem;
+      color: var(--white);
+      text-align: center;
+      font-family: 'akzidenz-Grotesk';
+      font-weight: bold;
+      display: block;
+      margin-top: -5px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--white);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .main-nav {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .main-nav a {
+      color: var(--white);
+      text-decoration: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid transparent;
+    }
+
+    .main-nav a:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .section {
+      display: flex;
+      width: 100%;
+      min-height: 100vh;
+      padding-top: 120px;
+    }
+
+    .left {
+      width: 350px;
+      background: transparent;
+      color: var(--white);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 0;
+      position: fixed;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      z-index: 999;
+    }
+
+    .left-fixed {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      background: transparent;
+      width: 100%;
+      height: 100vh;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .conveyor-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .conveyor-track {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 200%;
+      animation: conveyor 20s linear infinite;
+    }
+
+    @keyframes conveyor {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-50%);
+      }
+    }
+
+    .kids-img {
+      width: 100%;
+      height: 50%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .right {
+      width: calc(100% - 350px);
+      background: var(--white);
+      padding: 3rem 2rem 2rem 4rem;
+      margin-left: 350px;
+      overflow-y: auto;
+    }
+
+    .hero .right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: calc(100vh - 120px);
+    }
+
+    .hero .right h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero .right p {
+      margin-bottom: 2rem;
+      max-width: 700px;
+    }
+
+    .right h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .right p {
+      margin-bottom: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      margin-right: 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .btn.primary {
+      background: var(--brown);
+      color: var(--white);
+    }
+
+    .btn.primary:hover {
+      background: var(--brown-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn.secondary {
+      border: 2px solid var(--brown);
+      color: var(--brown);
+      background: transparent;
+    }
+
+    .btn.secondary:hover {
+      background: var(--brown);
+      color: var(--white);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .team-img {
+      max-width: 100%;
+      height: auto;
+      margin: 1rem 0;
+    }
+
+    .logo-center {
+      text-align: center;
+      margin: 1rem 0;
+    }
+
+    .logo-small {
+      height: 100px;
+    }
+
+    hr {
+      border: 1px solid #000;
+      margin: 1.5rem 0;
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .main-nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: var(--brown-dark);
+        width: 100%;
+        padding: 1rem;
+      }
+
+      .main-nav a {
+        margin: 0.5rem 0;
+        padding: 0.6rem 1.2rem;
+      }
+
+      .main-nav.active {
+        display: flex;
+      }
+
+      .section {
+        flex-direction: column;
+        padding-top: 100px;
+      }
+
+      .left {
+        position: relative;
+        width: 100%;
+        height: 300px;
+      }
+
+      .right {
+        width: 100%;
+        margin-left: 0;
+        padding: 2rem;
+      }
+
+      .left-fixed {
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+      }
+
+      .rotate-text {
+        display: none;
+      }
+      
+      .conveyor-track {
+        animation: conveyor 15s linear infinite;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="https://placehold.co/80x80/81390c/ffffff?text=LOGO" alt="Logo" class="logo-img">
+        <span class="logo-text">SYCAMORE ROYALS<br><span class="international">INTERNATIONAL</span></span>
+      </a>
+      <button id="menu-toggle" class="menu-toggle">&#9776;</button>
+      <nav id="main-nav" class="main-nav">
+        <a href="#about">About Us</a>
+        <a href="#programs">Our Programs</a>
+        <a href="#contact">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="section hero">
+    <div class="left">
+      <div class="left-fixed">
+        <div class="conveyor-container">
+          <div class="conveyor-track">
+            <img src="https://placehold.co/350x500/d38253/ffffff?text=Kids+1" alt="Children" class="kids-img">
+            <img src="https://placehold.co/350x500/81390c/ffffff?text=Kids+2" alt="Children" class="kids-img">
+            <img src="https://placehold.co/350x500/d38253/ffffff?text=Kids+3" alt="Children" class="kids-img">
+            <img src="https://placehold.co/350x500/81390c/ffffff?text=Kids+4" alt="Children" class="kids-img">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <h1>Welcome to Sycamore Royals International</h1>
+      <p>Proclaiming and demonstrating the Gospel of Jesus Christ through holistic development.</p>
+      <div class="cta">
+        <a href="#about" class="btn primary">About Us</a>
+        <a href="#programs" class="btn secondary">Our Programs</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="left">
+      <div class="left-fixed">
+        <div class="conveyor-container">
+          <div class="conveyor-track">
+            <img src="https://placehold.co/350x500/d38253/ffffff?text=About+1" alt="Children" class="kids-img">
+            <img src="https://placehold.co/350x500/81390c/ffffff?text=About+2" alt="Children" class="kids-img">
+            <img src="https://placehold.co/350x500/d38253/ffffff?text=About+3" alt="Children" class="kids-img">
+            <img src="https://placehold.co/350x500/81390c/ffffff?text=About+4" alt="Children" class="kids-img">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <h1>About</h1>
+      <p>Sycamore Royals International - SRI is a Non-Profit, Non-Governmental organization founded in 2020 by Stephen Okiror and Elizabeth Akeso Okiror. It aims to provide charitable activities and social enterprises to foster sustainable, holistic human flourishing. SRI is dedicated to serving the community of Angaro Wera and Africa at large.</p>
+      <hr>
+      <h2>Let's Connect</h2>
+      <p><strong>Phone</strong><br>+256 773 584968</p>
+      <p><strong>Email</strong><br>sycamoreroyal@gmail.com</p>
+      <img src="https://placehold.co/400x200/d38253/ffffff?text=Team+Photo" alt="Team" class="team-img">
+      <h3 class="center">SYCAMORE ROYALS INT.</h3>
+      <div class="logo-center">
+        <img src="https://placehold.co/100x100/81390c/ffffff?text=LOGO" alt="Logo" class="logo-small">
+      </div>
+    </div>
+  </section>
+
+  <!-- Programs Section -->
+  <section id="programs" class="section">
+    <div class="left">
+      <div class="left-fixed">
+        <div class="conveyor-container">
+          <div class="conveyor-track">
+            <img src="https://placehold.co/350x500/d38253/ffffff?text=Programs+1" alt="Children" class="kids-img">
+            <img src="https://placehold.co/350x500/81390c/ffffff?text=Programs+2" alt="Children" class="kids-img">
+            <img src="https://placehold.co/350x500/d38253/ffffff?text=Programs+3" alt="Children" class="kids-img">
+            <img src="https://placehold.co/350x500/81390c/ffffff?text=Programs+4" alt="Children" class="kids-img">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <h1>Our Programs</h1>
+      <ul>
+        <li>Holistic Child & Youth Development</li>
+        <li>Healthcare – preventive and curative services</li>
+        <li>Livelihoods and Business Development</li>
+        <li>Education support & sponsorships</li>
+        <li>Agriculture and livestock development</li>
+        <li>Climate change adaptation</li>
+      </ul>
+      <hr>
+      <h2>Plans</h2>
+      <h3>Short-term</h3>
+      <ul>
+        <li>Move from a single annual children's camp to multiple school-holiday camps</li>
+        <li>Train more church leaders and child workers</li>
+      </ul>
+      <h3>Long-term</h3>
+      <ul>
+        <li>Scale to sustainable services</li>
+        <li>Expand to other countries</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="left">
+      <div class="left-fixed">
+        <div class="conveyor-container">
+          <div class="conveyor-track">
+            <img src="https://placehold.co/350x500/d38253/ffffff?text=Contact+1" alt="Children" class="kids-img">
+            <img src="https://placehold.co/350x500/81390c/ffffff?text=Contact+2" alt="Children" class="kids-img">
+            <img src="https://placehold.co/350x500/d38253/ffffff?text=Contact+3" alt="Children" class="kids-img">
+            <img src="https://placehold.co/350x500/81390c/ffffff?text=Contact+4" alt="Children" class="kids-img">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <h1>Contact Us</h1>
+      <p><strong>Stephen Okiror – Founder & CEO</strong><br>Tel: +256 773 584 968<br>Email: <a href="mailto:sycamoreroyal@gmail.com">sycamoreroyal@gmail.com</a></p>
+      <p><strong>Location:</strong> Angaro Village – Wera Subcounty, Amuria District, Teso, Eastern Uganda.</p>
+      <form class="contact-form">
+        <label>Your Name</label>
+        <input type="text">
+        <label>Email</label>
+        <input type="email">
+        <label>Message</label>
+        <textarea rows="4"></textarea>
+        <button type="submit" class="btn primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuToggle = document.getElementById('menu-toggle');
+      const mainNav = document.getElementById('main-nav');
+
+      menuToggle.addEventListener('click', function () {
+        mainNav.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>

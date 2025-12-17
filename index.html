@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1280, initial-scale=0.35, maximum-scale=0.35, minimum-scale=0.35, user-scalable=no">
+  <title>Sycamore Royals International – Home</title>
+
+  <!-- Corben for the subtitle -->
+  <link href="https://fonts.googleapis.com/css2?family=Corben:wght@400&display=swap"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="home">
+
+  <!-- GLOBAL LOADER (appears on any navigation) -->
+  <div id="loader">
+    <img src="assets/media/loading.png"
+         alt="Loading…"
+         width="180"
+         height="180">
+  </div>
+
+  <!-- ==================== HEADER / NAVIGATION ==================== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="nav-logo.png"
+             alt="Sycamore Royals International logo"
+             class="logo-img">
+        <!-- the two‑line text -->
+        <span class="logo-text">
+          SYCAMORE ROYALS<br>
+          <span class="motto">SCALING THE HEIGHTS</span>
+        </span>
+      </a>
+
+      <button id="menu-toggle" class="menu-toggle">&#9776;</button>
+
+      <nav id="main-nav" class="main-nav">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT US</a>
+        <a href="events.html">EVENTS</a>
+        <a href="get-involved.html">GET INVOLVED</a>
+        <a href="donate.html" class="donate">DONATE</a>
+      </nav>
+
+      <button id="search-toggle" class="search-toggle">
+        <img src="search-icon.png"
+             alt="Search site"
+             class="search-icon"/>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==================== HERO (HOME) ==================== -->
+  <section class="section hero">
+    <!-- THE .right container now holds two columns -->
+    <div class="right">
+
+      <!-- LEFT COLUMN – TEXT -->
+      <div class="home-left">
+        <div class="hero-text">
+          <h2 class="welcome">WELCOME TO</h2>
+          <h1 class="title">SYCAMORE ROYALS</h1>
+          <p class="subtitle">
+            WE AIM TO PROVIDE CHARITABLE ACTIVITIES AND SOCIAL ENTERPRISES TO
+            FOSTER SUSTAINABLE, HOLISTIC HUMAN FLOURISHING.
+          </p>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN – FLOATING LOGO -->
+      <div class="home-right">
+        <img src="logo.png"
+             alt="Sycamore Royals – tree logo (slides up from bottom)"
+             class="home-logo">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER (home only) ==================== -->
+  <footer class="home-footer">
+    <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <p>&copy; 2025 Sycamore Royals International. All Rights Reserved.</p>
+  </div>
+  </footer>
+
+  <!-- ==================== SEARCH OVERLAY (shared) ==================== -->
+  <div id="search-overlay" class="search-overlay hidden">
+    <div class="search-modal">
+      <input type="text" id="search-input" placeholder="Search…" />
+      <button id="search-go" class="btn primary">Search</button>
+    </div>
+  </div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
