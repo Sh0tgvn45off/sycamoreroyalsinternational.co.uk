@@ -101,7 +101,9 @@ document.addEventListener('DOMContentLoaded', function () {
       return; // let the browser handle it
     }
 
-    const url = new URL(href, location.origin);
+    // IMPORTANT: resolve relative to current page (keeps repo subpath)
+    const url = new URL(href, location.href);
+
     if (url.origin !== location.origin) return; // external → ignore
     if (url.href === location.href) return;     // same page → ignore
 
@@ -121,5 +123,3 @@ document.addEventListener('DOMContentLoaded', function () {
   if (loader) loader.classList.remove('visible');
 
 });
-
-
